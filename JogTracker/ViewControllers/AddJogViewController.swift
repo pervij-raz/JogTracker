@@ -1,5 +1,5 @@
 //
-//  InfoViewController.swift
+//  AddJogViewController.swift
 //  JogTracker
 //
 //  Created by Ольга Бычок on 07/03/2020.
@@ -8,5 +8,10 @@
 
 import UIKit
 
-class InfoViewController: BaseViewController {
+class AddJogViewController: BaseViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
 }

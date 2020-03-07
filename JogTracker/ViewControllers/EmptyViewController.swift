@@ -9,9 +9,4 @@
 import UIKit
 
 class EmptyViewController: BaseViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-   
 }

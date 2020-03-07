@@ -21,6 +21,7 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         self.bannerView.withFilter = true
+        self.bannerView.activeFilter = true
         super.viewDidLoad()
     }
     

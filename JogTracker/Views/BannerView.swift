@@ -14,6 +14,7 @@ class BannerView: UIView {
     private let logoImageView = UIImageView()
     private let filterButton = UIButton()
     var withFilter: Bool = false
+    var activeFilter: Bool = false
     
     override func updateConstraints() {
         super.updateConstraints()
@@ -30,7 +31,7 @@ class BannerView: UIView {
         if withFilter {
             self.addSubview(self.filterButton)
             self.filterButton.translatesAutoresizingMaskIntoConstraints = false
-            self.filterButton.setImage(UIImage(named: "filterActive"), for: .normal)
+            self.filterButton.setImage(UIImage(named: self.activeFilter ? "filterActive" : "filter"), for: .normal)
         }
     }
     

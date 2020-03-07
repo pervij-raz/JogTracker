@@ -25,6 +25,9 @@
 		AD78D6CF2414145C000A4E58 /* AddJogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */; };
 		AD78D6D3241421A2000A4E58 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D2241421A2000A4E58 /* InfoViewController.swift */; };
 		AD78D6D524142447000A4E58 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D424142447000A4E58 /* EmptyViewController.swift */; };
+		AD78D6D724142727000A4E58 /* AddJogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D624142727000A4E58 /* AddJogViewController.swift */; };
+		AD78D6D924142B74000A4E58 /* WhiteRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */; };
+		AD78D6DB24142EC8000A4E58 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6DA24142EC8000A4E58 /* RoundedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJogTableViewCell.swift; sourceTree = "<group>"; };
 		AD78D6D2241421A2000A4E58 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		AD78D6D424142447000A4E58 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		AD78D6D624142727000A4E58 /* AddJogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJogViewController.swift; sourceTree = "<group>"; };
+		AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRoundedButton.swift; sourceTree = "<group>"; };
+		AD78D6DA24142EC8000A4E58 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 				AD78D6C12413F4DA000A4E58 /* JogsViewController.swift */,
 				AD78D6D2241421A2000A4E58 /* InfoViewController.swift */,
 				AD78D6D424142447000A4E58 /* EmptyViewController.swift */,
+				AD78D6D624142727000A4E58 /* AddJogViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -113,6 +120,8 @@
 			children = (
 				AD78D6B72413B368000A4E58 /* RoundedButton.swift */,
 				AD78D6BF2413E4A1000A4E58 /* BannerView.swift */,
+				AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */,
+				AD78D6DA24142EC8000A4E58 /* RoundedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD78D6C52413F77A000A4E58 /* JogsViewModel.swift in Sources */,
+				AD78D6D924142B74000A4E58 /* WhiteRoundedButton.swift in Sources */,
+				AD78D6DB24142EC8000A4E58 /* RoundedView.swift in Sources */,
 				AD78D6C02413E4A1000A4E58 /* BannerView.swift in Sources */,
 				AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */,
 				AD78D6CD2413FE02000A4E58 /* JogHeaderTableViewCell.swift in Sources */,
@@ -227,6 +238,7 @@
 				AD78D6D3241421A2000A4E58 /* InfoViewController.swift in Sources */,
 				AD78D6C22413F4DA000A4E58 /* JogsViewController.swift in Sources */,
 				AD78D6D524142447000A4E58 /* EmptyViewController.swift in Sources */,
+				AD78D6D724142727000A4E58 /* AddJogViewController.swift in Sources */,
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
 				AD78D6BC2413CFB7000A4E58 /* BaseViewController.swift in Sources */,
 			);
