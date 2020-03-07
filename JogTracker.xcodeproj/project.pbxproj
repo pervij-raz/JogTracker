@@ -23,6 +23,8 @@
 		AD78D6CB2413FCEA000A4E58 /* JogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6CA2413FCEA000A4E58 /* JogTableViewCell.swift */; };
 		AD78D6CD2413FE02000A4E58 /* JogHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6CC2413FE02000A4E58 /* JogHeaderTableViewCell.swift */; };
 		AD78D6CF2414145C000A4E58 /* AddJogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */; };
+		AD78D6D3241421A2000A4E58 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D2241421A2000A4E58 /* InfoViewController.swift */; };
+		AD78D6D524142447000A4E58 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D424142447000A4E58 /* EmptyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		AD78D6CA2413FCEA000A4E58 /* JogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogTableViewCell.swift; sourceTree = "<group>"; };
 		AD78D6CC2413FE02000A4E58 /* JogHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJogTableViewCell.swift; sourceTree = "<group>"; };
+		AD78D6D2241421A2000A4E58 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		AD78D6D424142447000A4E58 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				AD78D6B92413B969000A4E58 /* MenuViewController.swift */,
 				AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */,
 				AD78D6C12413F4DA000A4E58 /* JogsViewController.swift */,
+				AD78D6D2241421A2000A4E58 /* InfoViewController.swift */,
+				AD78D6D424142447000A4E58 /* EmptyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,7 +224,9 @@
 				AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */,
 				AD78D6CF2414145C000A4E58 /* AddJogTableViewCell.swift in Sources */,
 				AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */,
+				AD78D6D3241421A2000A4E58 /* InfoViewController.swift in Sources */,
 				AD78D6C22413F4DA000A4E58 /* JogsViewController.swift in Sources */,
+				AD78D6D524142447000A4E58 /* EmptyViewController.swift in Sources */,
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
 				AD78D6BC2413CFB7000A4E58 /* BaseViewController.swift in Sources */,
 			);
