@@ -10,7 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    private let bannerView = BannerView()
+    let bannerView = BannerView()
     private let fillingView = UIView()
     
     private func setupBannerView() {

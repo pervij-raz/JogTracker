@@ -17,6 +17,12 @@
 		AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B92413B969000A4E58 /* MenuViewController.swift */; };
 		AD78D6BC2413CFB7000A4E58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */; };
 		AD78D6C02413E4A1000A4E58 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6BF2413E4A1000A4E58 /* BannerView.swift */; };
+		AD78D6C22413F4DA000A4E58 /* JogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6C12413F4DA000A4E58 /* JogsViewController.swift */; };
+		AD78D6C52413F77A000A4E58 /* JogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6C42413F77A000A4E58 /* JogsViewModel.swift */; };
+		AD78D6C82413F8B8000A4E58 /* Jog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6C72413F8B8000A4E58 /* Jog.swift */; };
+		AD78D6CB2413FCEA000A4E58 /* JogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6CA2413FCEA000A4E58 /* JogTableViewCell.swift */; };
+		AD78D6CD2413FE02000A4E58 /* JogHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6CC2413FE02000A4E58 /* JogHeaderTableViewCell.swift */; };
+		AD78D6CF2414145C000A4E58 /* AddJogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		AD78D6B92413B969000A4E58 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AD78D6BF2413E4A1000A4E58 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		AD78D6C12413F4DA000A4E58 /* JogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsViewController.swift; sourceTree = "<group>"; };
+		AD78D6C42413F77A000A4E58 /* JogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsViewModel.swift; sourceTree = "<group>"; };
+		AD78D6C72413F8B8000A4E58 /* Jog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jog.swift; sourceTree = "<group>"; };
+		AD78D6CA2413FCEA000A4E58 /* JogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogTableViewCell.swift; sourceTree = "<group>"; };
+		AD78D6CC2413FE02000A4E58 /* JogHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJogTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,9 @@
 		AD78D6A2241389FE000A4E58 /* JogTracker */ = {
 			isa = PBXGroup;
 			children = (
+				AD78D6C92413FCBE000A4E58 /* Cells */,
+				AD78D6C62413F8A2000A4E58 /* Model */,
+				AD78D6C32413F75F000A4E58 /* ViewModels */,
 				AD78D6BE2413E470000A4E58 /* Views */,
 				AD78D6BD2413E44F000A4E58 /* ViewControllers */,
 				AD78D6A3241389FE000A4E58 /* AppDelegate.swift */,
@@ -82,6 +97,7 @@
 				AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */,
 				AD78D6B92413B969000A4E58 /* MenuViewController.swift */,
 				AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */,
+				AD78D6C12413F4DA000A4E58 /* JogsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -93,6 +109,32 @@
 				AD78D6BF2413E4A1000A4E58 /* BannerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AD78D6C32413F75F000A4E58 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AD78D6C42413F77A000A4E58 /* JogsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AD78D6C62413F8A2000A4E58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD78D6C72413F8B8000A4E58 /* Jog.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD78D6C92413FCBE000A4E58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD78D6CA2413FCEA000A4E58 /* JogTableViewCell.swift */,
+				AD78D6CC2413FE02000A4E58 /* JogHeaderTableViewCell.swift */,
+				AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,11 +208,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD78D6C52413F77A000A4E58 /* JogsViewModel.swift in Sources */,
 				AD78D6C02413E4A1000A4E58 /* BannerView.swift in Sources */,
 				AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */,
+				AD78D6CD2413FE02000A4E58 /* JogHeaderTableViewCell.swift in Sources */,
+				AD78D6CB2413FCEA000A4E58 /* JogTableViewCell.swift in Sources */,
 				AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */,
+				AD78D6C82413F8B8000A4E58 /* Jog.swift in Sources */,
 				AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */,
+				AD78D6CF2414145C000A4E58 /* AddJogTableViewCell.swift in Sources */,
 				AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */,
+				AD78D6C22413F4DA000A4E58 /* JogsViewController.swift in Sources */,
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
 				AD78D6BC2413CFB7000A4E58 /* BaseViewController.swift in Sources */,
 			);

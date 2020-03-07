@@ -12,6 +12,8 @@ class BannerView: UIView {
     
     let menuButton = UIButton()
     private let logoImageView = UIImageView()
+    private let filterButton = UIButton()
+    var withFilter: Bool = false
     
     override func updateConstraints() {
         super.updateConstraints()
@@ -25,6 +27,11 @@ class BannerView: UIView {
         self.logoImageView.translatesAutoresizingMaskIntoConstraints = false
         self.menuButton.setImage(UIImage(named: "menu"), for: .normal)
         self.logoImageView.image = UIImage(named: "logoWhite")
+        if withFilter {
+            self.addSubview(self.filterButton)
+            self.filterButton.translatesAutoresizingMaskIntoConstraints = false
+            self.filterButton.setImage(UIImage(named: "filterActive"), for: .normal)
+        }
     }
     
     func doLayout() {
@@ -41,6 +48,10 @@ class BannerView: UIView {
                            toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 98).isActive = true
         NSLayoutConstraint(item: self.logoImageView, attribute: .height, relatedBy: .equal,
                            toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 37).isActive = true
+        if withFilter {
+        NSLayoutConstraint(item: self.filterButton, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailingMargin, multiplier: 1.0, constant: (-92)).isActive = true
+        NSLayoutConstraint(item: self.filterButton, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: (18)).isActive = true
+        }
     }
     
     
