@@ -33,28 +33,20 @@
                                             <segue destination="sOT-zJ-mvB" kind="show" id="w6R-B9-wTX"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal" translatesAutoresizingMaskIntoConstraints="NO" id="hKU-bK-9Dt">
-                                        <rect key="frame" x="25" y="20" width="29" height="37"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="UKq-xe-e7l">
+                                        <rect key="frame" x="25" y="20" width="98.000000000000028" height="37"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="29" id="46n-Vx-wJh"/>
-                                            <constraint firstAttribute="height" constant="37" id="jsc-U3-HWh"/>
+                                            <constraint firstAttribute="width" constant="98" id="AaC-z7-OIa"/>
+                                            <constraint firstAttribute="height" constant="37" id="lwZ-Aa-UYu"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGOBEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR7-5y-Ad5">
-                                        <rect key="frame" x="64" y="29.5" width="83" height="18"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="478-Vk-KNB" secondAttribute="trailing" constant="25" id="2Um-i9-WsB"/>
-                                    <constraint firstItem="hKU-bK-9Dt" firstAttribute="leading" secondItem="LIB-uo-VBT" secondAttribute="leading" constant="25" id="5MF-Eb-QKR"/>
                                     <constraint firstAttribute="height" constant="77" id="Ise-RS-QDm"/>
-                                    <constraint firstItem="dR7-5y-Ad5" firstAttribute="leading" secondItem="hKU-bK-9Dt" secondAttribute="trailing" constant="10" id="JTG-5f-Dzp"/>
-                                    <constraint firstItem="hKU-bK-9Dt" firstAttribute="centerY" secondItem="LIB-uo-VBT" secondAttribute="centerY" id="dGK-96-4IR"/>
-                                    <constraint firstItem="dR7-5y-Ad5" firstAttribute="centerY" secondItem="LIB-uo-VBT" secondAttribute="centerY" id="gNY-5D-dUi"/>
+                                    <constraint firstItem="UKq-xe-e7l" firstAttribute="leading" secondItem="LIB-uo-VBT" secondAttribute="leading" constant="25" id="XeD-7A-4IY"/>
+                                    <constraint firstItem="UKq-xe-e7l" firstAttribute="top" secondItem="LIB-uo-VBT" secondAttribute="top" constant="20" id="exX-ci-2zh"/>
                                     <constraint firstItem="478-Vk-KNB" firstAttribute="centerY" secondItem="LIB-uo-VBT" secondAttribute="centerY" id="mXY-Qs-Qr6"/>
                                 </constraints>
                             </view>
@@ -205,10 +197,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="animal" width="30" height="37"/>
         <image name="bearFace" width="160" height="150"/>
         <image name="closeButton" width="512" height="512"/>
         <image name="logoGreen" width="98" height="37"/>
+        <image name="logoWhite" width="98" height="37"/>
         <image name="menu" width="28" height="23"/>
     </resources>
 </document>
