@@ -10,19 +10,118 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JogTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="JogTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIB-uo-VBT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="478-Vk-KNB">
+                                        <rect key="frame" x="361" y="26.5" width="28" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="ljG-Sm-z1U"/>
+                                            <constraint firstAttribute="width" constant="28" id="plP-t5-3KG"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="menu"/>
+                                        <connections>
+                                            <action selector="menuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Yt-BD-d0m"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal" translatesAutoresizingMaskIntoConstraints="NO" id="hKU-bK-9Dt">
+                                        <rect key="frame" x="25" y="20" width="29" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="29" id="46n-Vx-wJh"/>
+                                            <constraint firstAttribute="height" constant="37" id="jsc-U3-HWh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGOBEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR7-5y-Ad5">
+                                        <rect key="frame" x="64" y="29.5" width="83" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="478-Vk-KNB" secondAttribute="trailing" constant="25" id="2Um-i9-WsB"/>
+                                    <constraint firstItem="hKU-bK-9Dt" firstAttribute="leading" secondItem="LIB-uo-VBT" secondAttribute="leading" constant="25" id="5MF-Eb-QKR"/>
+                                    <constraint firstAttribute="height" constant="77" id="Ise-RS-QDm"/>
+                                    <constraint firstItem="dR7-5y-Ad5" firstAttribute="leading" secondItem="hKU-bK-9Dt" secondAttribute="trailing" constant="10" id="JTG-5f-Dzp"/>
+                                    <constraint firstItem="hKU-bK-9Dt" firstAttribute="centerY" secondItem="LIB-uo-VBT" secondAttribute="centerY" id="dGK-96-4IR"/>
+                                    <constraint firstItem="dR7-5y-Ad5" firstAttribute="centerY" secondItem="LIB-uo-VBT" secondAttribute="centerY" id="gNY-5D-dUi"/>
+                                    <constraint firstItem="478-Vk-KNB" firstAttribute="centerY" secondItem="LIB-uo-VBT" secondAttribute="centerY" id="mXY-Qs-Qr6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-YJ-RJS">
+                                <rect key="frame" x="0.0" y="121" width="414" height="741"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="fqN-gB-vxv">
+                                        <rect key="frame" x="127" y="214" width="160" height="313"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bearFace" translatesAutoresizingMaskIntoConstraints="NO" id="mNH-cZ-M3W">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="164"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oi-th-Yyi" customClass="RoundedButton" customModule="JogTracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="266" width="160" height="47"/>
+                                                <state key="normal" title="Let me in">
+                                                    <color key="titleColor" red="0.9137254901960784" green="0.56470588235294117" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mho-aJ-xou"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3oi-th-Yyi" firstAttribute="leading" secondItem="fqN-gB-vxv" secondAttribute="leading" id="Jcd-Fa-Hv1"/>
+                                            <constraint firstAttribute="trailing" secondItem="3oi-th-Yyi" secondAttribute="trailing" id="UGv-P6-RQH"/>
+                                            <constraint firstAttribute="height" constant="313" id="aiy-yC-aze"/>
+                                            <constraint firstAttribute="width" constant="160" id="p2e-sk-Zjp"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fqN-gB-vxv" firstAttribute="centerX" secondItem="a9d-YJ-RJS" secondAttribute="centerX" id="SlG-oD-YRf"/>
+                                    <constraint firstItem="fqN-gB-vxv" firstAttribute="centerY" secondItem="a9d-YJ-RJS" secondAttribute="centerY" id="yAH-PE-Fto"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Bf-NH-gZd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2Bf-NH-gZd" secondAttribute="trailing" id="2um-j9-EOo"/>
+                            <constraint firstItem="2Bf-NH-gZd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3lJ-JA-fvr"/>
+                            <constraint firstItem="LIB-uo-VBT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6ws-rC-7gq"/>
+                            <constraint firstItem="LIB-uo-VBT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y78-MS-HKL"/>
+                            <constraint firstItem="LIB-uo-VBT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YYT-5n-YPR"/>
+                            <constraint firstItem="a9d-YJ-RJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bQz-wO-ih0"/>
+                            <constraint firstItem="a9d-YJ-RJS" firstAttribute="top" secondItem="LIB-uo-VBT" secondAttribute="bottom" id="ipa-V6-NhZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a9d-YJ-RJS" secondAttribute="trailing" id="og0-gg-9Qf"/>
+                            <constraint firstItem="LIB-uo-VBT" firstAttribute="top" secondItem="2Bf-NH-gZd" secondAttribute="bottom" id="pvp-2w-eaQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a9d-YJ-RJS" secondAttribute="bottom" id="s0E-1W-lCj"/>
+                            <constraint firstItem="2Bf-NH-gZd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tQB-fr-jyI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="animal" width="30" height="37"/>
+        <image name="bearFace" width="160" height="150"/>
+        <image name="menu" width="28" height="23"/>
+    </resources>
 </document>
