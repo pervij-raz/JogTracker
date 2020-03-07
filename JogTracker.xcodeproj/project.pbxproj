@@ -15,6 +15,8 @@
 		AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */; };
 		AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B72413B368000A4E58 /* RoundedButton.swift */; };
 		AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B92413B969000A4E58 /* MenuViewController.swift */; };
+		AD78D6BC2413CFB7000A4E58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */; };
+		AD78D6C02413E4A1000A4E58 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6BF2413E4A1000A4E58 /* BannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AD78D6B72413B368000A4E58 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		AD78D6B92413B969000A4E58 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AD78D6BF2413E4A1000A4E58 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +64,35 @@
 		AD78D6A2241389FE000A4E58 /* JogTracker */ = {
 			isa = PBXGroup;
 			children = (
+				AD78D6BE2413E470000A4E58 /* Views */,
+				AD78D6BD2413E44F000A4E58 /* ViewControllers */,
 				AD78D6A3241389FE000A4E58 /* AppDelegate.swift */,
-				AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */,
 				AD78D6A7241389FE000A4E58 /* Main.storyboard */,
 				AD78D6AA241389FF000A4E58 /* Assets.xcassets */,
 				AD78D6AC241389FF000A4E58 /* LaunchScreen.storyboard */,
 				AD78D6AF241389FF000A4E58 /* Info.plist */,
 				AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */,
-				AD78D6B72413B368000A4E58 /* RoundedButton.swift */,
-				AD78D6B92413B969000A4E58 /* MenuViewController.swift */,
 			);
 			path = JogTracker;
+			sourceTree = "<group>";
+		};
+		AD78D6BD2413E44F000A4E58 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */,
+				AD78D6B92413B969000A4E58 /* MenuViewController.swift */,
+				AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD78D6BE2413E470000A4E58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD78D6B72413B368000A4E58 /* RoundedButton.swift */,
+				AD78D6BF2413E4A1000A4E58 /* BannerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD78D6C02413E4A1000A4E58 /* BannerView.swift in Sources */,
 				AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */,
 				AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */,
 				AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */,
 				AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */,
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
+				AD78D6BC2413CFB7000A4E58 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

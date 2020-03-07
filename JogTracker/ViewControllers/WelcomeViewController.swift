@@ -8,19 +8,18 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func menuButton(_ sender: UIButton) {
-        
-        // to do: menu implementaition
-    }
-    
     @IBAction func loginButton(_ sender: UIButton) {
         // to do: login implementation
+    }
+    
+    override func menuAction() {
+    
     }
     
 }
