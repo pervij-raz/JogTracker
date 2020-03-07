@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6A3241389FE000A4E58 /* AppDelegate.swift */; };
-		AD78D6A6241389FE000A4E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6A5241389FE000A4E58 /* ViewController.swift */; };
+		AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */; };
 		AD78D6A9241389FE000A4E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD78D6A7241389FE000A4E58 /* Main.storyboard */; };
 		AD78D6AB241389FF000A4E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD78D6AA241389FF000A4E58 /* Assets.xcassets */; };
 		AD78D6AE241389FF000A4E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD78D6AC241389FF000A4E58 /* LaunchScreen.storyboard */; };
 		AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */; };
 		AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B72413B368000A4E58 /* RoundedButton.swift */; };
+		AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B92413B969000A4E58 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD78D6A0241389FE000A4E58 /* JogTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD78D6A3241389FE000A4E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD78D6A5241389FE000A4E58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AD78D6A8241389FE000A4E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD78D6AA241389FF000A4E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD78D6AD241389FF000A4E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD78D6AF241389FF000A4E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AD78D6B72413B368000A4E58 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		AD78D6B92413B969000A4E58 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				AD78D6A3241389FE000A4E58 /* AppDelegate.swift */,
-				AD78D6A5241389FE000A4E58 /* ViewController.swift */,
+				AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */,
 				AD78D6A7241389FE000A4E58 /* Main.storyboard */,
 				AD78D6AA241389FF000A4E58 /* Assets.xcassets */,
 				AD78D6AC241389FF000A4E58 /* LaunchScreen.storyboard */,
 				AD78D6AF241389FF000A4E58 /* Info.plist */,
 				AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */,
 				AD78D6B72413B368000A4E58 /* RoundedButton.swift */,
+				AD78D6B92413B969000A4E58 /* MenuViewController.swift */,
 			);
 			path = JogTracker;
 			sourceTree = "<group>";
@@ -142,7 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */,
-				AD78D6A6241389FE000A4E58 /* ViewController.swift in Sources */,
+				AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */,
+				AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */,
 				AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */,
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
 			);

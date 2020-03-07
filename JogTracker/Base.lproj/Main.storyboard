@@ -30,6 +30,7 @@
                                         <state key="normal" backgroundImage="menu"/>
                                         <connections>
                                             <action selector="menuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Yt-BD-d0m"/>
+                                            <segue destination="sOT-zJ-mvB" kind="show" id="w6R-B9-wTX"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal" translatesAutoresizingMaskIntoConstraints="NO" id="hKU-bK-9Dt">
@@ -118,10 +119,96 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="3Mu-L8-dVM">
+            <objects>
+                <viewController id="sOT-zJ-mvB" customClass="MenuViewController" customModule="JogTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ngr-tG-lZV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1F-9B-0Fx">
+                                <rect key="frame" x="368" y="72" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z1F-9B-0Fx" secondAttribute="height" multiplier="1:1" id="Lyl-4N-wOQ"/>
+                                    <constraint firstAttribute="width" constant="21" id="Oxs-YH-mUs"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="closeButton">
+                                    <color key="titleColor" red="0.69019607843137254" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButton:" destination="sOT-zJ-mvB" eventType="touchUpInside" id="bvi-yp-2lb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGreen" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-Nf-64V">
+                                <rect key="frame" x="25" y="64" width="98.000000000000028" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="E7H-XN-4K4"/>
+                                    <constraint firstAttribute="height" constant="37" id="ti9-V0-pqC"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ydA-4L-Ahd">
+                                <rect key="frame" x="122" y="228" width="170" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vq-0e-nJM">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="JOGS">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="jogsButton:" destination="sOT-zJ-mvB" eventType="touchUpInside" id="Wi3-ho-Yak"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNI-yL-Txv">
+                                        <rect key="frame" x="0.0" y="50" width="170" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="INFO">
+                                            <color key="titleColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="infoButton:" destination="sOT-zJ-mvB" eventType="touchUpInside" id="IIY-Gv-Lth"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tw-68-pBI">
+                                        <rect key="frame" x="0.0" y="100" width="170" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="CONTACT US">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="contactUsButton:" destination="sOT-zJ-mvB" eventType="touchUpInside" id="vF5-Ui-e2M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="hCk-Ag-09f"/>
+                                    <constraint firstAttribute="width" constant="170" id="rzf-Kt-h3i"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GCU-Nf-64V" firstAttribute="leading" secondItem="jwQ-1Y-vud" secondAttribute="leading" constant="25" id="7fL-IM-eRX"/>
+                            <constraint firstItem="ydA-4L-Ahd" firstAttribute="top" secondItem="jwQ-1Y-vud" secondAttribute="top" constant="184" id="HgE-aw-hA2"/>
+                            <constraint firstItem="GCU-Nf-64V" firstAttribute="top" secondItem="jwQ-1Y-vud" secondAttribute="top" constant="20" id="YYd-ZU-XlS"/>
+                            <constraint firstItem="ydA-4L-Ahd" firstAttribute="centerX" secondItem="Ngr-tG-lZV" secondAttribute="centerX" id="ijc-M0-tnh"/>
+                            <constraint firstItem="jwQ-1Y-vud" firstAttribute="trailing" secondItem="Z1F-9B-0Fx" secondAttribute="trailing" constant="25" id="sW5-H4-na4"/>
+                            <constraint firstItem="Z1F-9B-0Fx" firstAttribute="top" secondItem="jwQ-1Y-vud" secondAttribute="top" constant="28" id="xQe-Pd-ZPb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jwQ-1Y-vud"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sf4-on-fZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="21"/>
+        </scene>
     </scenes>
     <resources>
         <image name="animal" width="30" height="37"/>
         <image name="bearFace" width="160" height="150"/>
+        <image name="closeButton" width="512" height="512"/>
+        <image name="logoGreen" width="98" height="37"/>
         <image name="menu" width="28" height="23"/>
     </resources>
 </document>

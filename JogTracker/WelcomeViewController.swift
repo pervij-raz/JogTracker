@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WelcomeViewController.swift
 //  JogTracker
 //
 //  Created by Ольга Бычок on 07/03/2020.
