@@ -1,5 +1,5 @@
 //
-//  WelcomeViewModel.swift
+//  UserData.swift
 //  JogTracker
 //
 //  Created by Ольга Бычок on 08/03/2020.
@@ -8,10 +8,13 @@
 
 import Foundation
 
-class WelcomeViewModel {
+class UserData {
     
-    func login(with handler: @escaping Handler) {
-        NetworkManager.shared.loginUser(with: handler)
+    static let shared = UserData()
+    
+    private init() {
     }
     
+    open var id: String?
+    open var jogs: [Jog]?
 }

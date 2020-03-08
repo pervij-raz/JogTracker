@@ -1,0 +1,70 @@
+//
+//  ViewController.swift
+//  JogTracker
+//
+//  Created by Ольга Бычок on 08/03/2020.
+//  Copyright © 2020 Ольга Бычок. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+    var handler: Handler = { error in }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        handler = {[weak self] error in
+            if let error = error {
+                self?.showError(error.localizedDescription)
+            } else {
+                self?.navigate()
+            }
+        }
+    }
+    
+    func waiting() {
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
+        let waitingIndicator = UIActivityIndicatorView(style: .gray)
+        waitingIndicator.center = self.view.center
+        waitingIndicator.startAnimating()
+        self.view.addSubview(waitingIndicator)
+    }
+    
+    func stopWaiting() {
+        self.view.subviews.forEach { view in
+            if view is UIVisualEffectView || view is UIActivityIndicatorView {
+                view.removeFromSuperview()
+            }
+        }
+    }
+    
+    func showError(_ error: String?) {
+        let alertController = UIAlertController(title: "Something went wrong", message: error, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: { action in
+            self.stopWaiting()
+        })
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc func menuAction() {
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        guard let menuVC  = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {return}
+        self.navigationController?.pushViewController(menuVC, animated: true)
+    }
+    
+    func navigateToNextController() {
+        self.menuAction()
+    }
+    
+    private func navigate() {
+        self.stopWaiting()
+        self.navigateToNextController()
+    }
+    
+}

@@ -11,7 +11,6 @@
 		AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */; };
 		AD78D6A9241389FE000A4E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD78D6A7241389FE000A4E58 /* Main.storyboard */; };
 		AD78D6AB241389FF000A4E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD78D6AA241389FF000A4E58 /* Assets.xcassets */; };
-		AD78D6AE241389FF000A4E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD78D6AC241389FF000A4E58 /* LaunchScreen.storyboard */; };
 		AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */; };
 		AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B72413B368000A4E58 /* RoundedButton.swift */; };
 		AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6B92413B969000A4E58 /* MenuViewController.swift */; };
@@ -29,6 +28,10 @@
 		AD78D6D924142B74000A4E58 /* WhiteRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */; };
 		AD78D6DB24142EC8000A4E58 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6DA24142EC8000A4E58 /* RoundedView.swift */; };
 		AD78D6DD2415649A000A4E58 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6DC24156499000A4E58 /* WelcomeViewModel.swift */; };
+		AD78D6DF2415669D000A4E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6DE2415669D000A4E58 /* ViewController.swift */; };
+		AD78D6E124156722000A4E58 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6E024156722000A4E58 /* MenuViewModel.swift */; };
+		AD78D6E42415701F000A4E58 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6E32415701F000A4E58 /* UserData.swift */; };
+		AD78D6E624157EE8000A4E58 /* JogsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6E524157EE8000A4E58 /* JogsResponse.swift */; };
 		B5C974FFA23A47A36675FED0 /* Pods_JogTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F49D58D3D31AA8552EB18A /* Pods_JogTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +43,6 @@
 		AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		AD78D6A8241389FE000A4E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD78D6AA241389FF000A4E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AD78D6AD241389FF000A4E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD78D6AF241389FF000A4E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AD78D6B72413B368000A4E58 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -59,6 +61,10 @@
 		AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRoundedButton.swift; sourceTree = "<group>"; };
 		AD78D6DA24142EC8000A4E58 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		AD78D6DC24156499000A4E58 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		AD78D6DE2415669D000A4E58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD78D6E024156722000A4E58 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		AD78D6E32415701F000A4E58 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		AD78D6E524157EE8000A4E58 /* JogsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsResponse.swift; sourceTree = "<group>"; };
 		C8176812DFC351E9C5DD5A7B /* Pods-JogTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JogTracker.debug.xcconfig"; path = "Target Support Files/Pods-JogTracker/Pods-JogTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +101,7 @@
 		AD78D6A2241389FE000A4E58 /* JogTracker */ = {
 			isa = PBXGroup;
 			children = (
+				AD78D6E224156FBF000A4E58 /* Network */,
 				AD78D6C92413FCBE000A4E58 /* Cells */,
 				AD78D6C62413F8A2000A4E58 /* Model */,
 				AD78D6C32413F75F000A4E58 /* ViewModels */,
@@ -103,9 +110,7 @@
 				AD78D6A3241389FE000A4E58 /* AppDelegate.swift */,
 				AD78D6A7241389FE000A4E58 /* Main.storyboard */,
 				AD78D6AA241389FF000A4E58 /* Assets.xcassets */,
-				AD78D6AC241389FF000A4E58 /* LaunchScreen.storyboard */,
 				AD78D6AF241389FF000A4E58 /* Info.plist */,
-				AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */,
 			);
 			path = JogTracker;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				AD78D6D2241421A2000A4E58 /* InfoViewController.swift */,
 				AD78D6D424142447000A4E58 /* EmptyViewController.swift */,
 				AD78D6D624142727000A4E58 /* AddJogViewController.swift */,
+				AD78D6DE2415669D000A4E58 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -140,6 +146,7 @@
 			children = (
 				AD78D6C42413F77A000A4E58 /* JogsViewModel.swift */,
 				AD78D6DC24156499000A4E58 /* WelcomeViewModel.swift */,
+				AD78D6E024156722000A4E58 /* MenuViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -148,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				AD78D6C72413F8B8000A4E58 /* Jog.swift */,
+				AD78D6E32415701F000A4E58 /* UserData.swift */,
+				AD78D6E524157EE8000A4E58 /* JogsResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +169,14 @@
 				AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		AD78D6E224156FBF000A4E58 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AD78D6B52413A2FD000A4E58 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		B198EBB7EB195B7FD7922AFA /* Frameworks */ = {
@@ -239,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD78D6AE241389FF000A4E58 /* LaunchScreen.storyboard in Resources */,
 				AD78D6AB241389FF000A4E58 /* Assets.xcassets in Resources */,
 				AD78D6A9241389FE000A4E58 /* Main.storyboard in Resources */,
 			);
@@ -299,15 +315,19 @@
 				AD78D6DB24142EC8000A4E58 /* RoundedView.swift in Sources */,
 				AD78D6C02413E4A1000A4E58 /* BannerView.swift in Sources */,
 				AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */,
+				AD78D6E624157EE8000A4E58 /* JogsResponse.swift in Sources */,
 				AD78D6CD2413FE02000A4E58 /* JogHeaderTableViewCell.swift in Sources */,
 				AD78D6CB2413FCEA000A4E58 /* JogTableViewCell.swift in Sources */,
 				AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */,
 				AD78D6C82413F8B8000A4E58 /* Jog.swift in Sources */,
 				AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */,
+				AD78D6DF2415669D000A4E58 /* ViewController.swift in Sources */,
 				AD78D6CF2414145C000A4E58 /* AddJogTableViewCell.swift in Sources */,
 				AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */,
 				AD78D6D3241421A2000A4E58 /* InfoViewController.swift in Sources */,
 				AD78D6C22413F4DA000A4E58 /* JogsViewController.swift in Sources */,
+				AD78D6E124156722000A4E58 /* MenuViewModel.swift in Sources */,
+				AD78D6E42415701F000A4E58 /* UserData.swift in Sources */,
 				AD78D6D524142447000A4E58 /* EmptyViewController.swift in Sources */,
 				AD78D6D724142727000A4E58 /* AddJogViewController.swift in Sources */,
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
@@ -325,14 +345,6 @@
 				AD78D6A8241389FE000A4E58 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AD78D6AC241389FF000A4E58 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD78D6AD241389FF000A4E58 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

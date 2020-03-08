@@ -16,7 +16,11 @@ class JogTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     
     func setup(with jog: Jog) {
-        dateLabel.text = jog.date
+        if let date = jog.date {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM.yyyy"
+            dateLabel.text = formatter.string(from: date)
+        }
         speedLabel.text = String(jog.speed)
         distanceLabel.text = "\(jog.distance ?? 0) km"
         timeLabel.text = "\(jog.time ?? 0) min"

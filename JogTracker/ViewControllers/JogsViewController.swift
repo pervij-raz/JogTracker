@@ -30,15 +30,16 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
 
 extension JogsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.jogs.count + 1
+        return self.viewModel.jogs?.count ?? 0 + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row < self.viewModel.jogs.count {
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell") as? JogTableViewCell else {
-            fatalError("Can't find cell with id: sortCellID")
-        }
-        cell.setup(with: self.viewModel.jogs[indexPath.row])
+        if indexPath.row < self.viewModel.jogs?.count ?? 0 {
+            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell") as? JogTableViewCell else {
+                fatalError("Can't find cell with id: sortCellID")
+            }
+            guard let jogs = self.viewModel.jogs else {return cell}
+            cell.setup(with: jogs[indexPath.row])
             return cell
         } else {
             guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "AddCell") as? AddJogTableViewCell else {

@@ -8,8 +8,10 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
-
+class MenuViewController: ViewController {
+    
+    let viewModel = MenuViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,6 +21,8 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func jogsButton(_ sender: UIButton) {
+        self.waiting()
+        self.viewModel.getJogs(with: self.handler)
     }
     
     @IBAction func infoButton(_ sender: UIButton) {
@@ -28,6 +32,26 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func contactUsButton(_ sender: UIButton) {
+    }
+    
+    override func navigateToNextController() {
+        if viewModel.jogs?.isEmpty ?? true {
+            self.openEmptyList()
+        } else {
+           self.openList()
+        }
+    }
+    
+    private func openEmptyList() {
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        guard let emptyVC  = storyboard.instantiateViewController(withIdentifier: "EmptyViewController") as? EmptyViewController else {return}
+        self.navigationController?.pushViewController(emptyVC, animated: true)
+    }
+    
+    private func openList() {
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        guard let listVC  = storyboard.instantiateViewController(withIdentifier: "JogsViewController") as? JogsViewController else {return}
+        self.navigationController?.pushViewController(listVC, animated: true)
     }
     
 }

@@ -18,13 +18,7 @@ class WelcomeViewController: BaseViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {
         self.waiting()
-        self.viewModel.login(with: {error in
-            if let error = error {
-                self.showError(error.localizedDescription)
-            } else {
-                self.menuAction()
-            }
-        })
+        self.viewModel.login(with: self.handler)
     }
     
 }
