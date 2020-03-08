@@ -9,17 +9,20 @@
 import UIKit
 
 class WelcomeViewController: BaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
-        // to do: login implementation
-    }
-    
-    override func menuAction() {
-    
+        self.waiting()
+        NetworkManager.shared.loginUser(with: {error in
+            if let error = error {
+                self.showError(error.localizedDescription)
+            } else {
+                self.menuAction()
+            }
+        })
     }
     
 }

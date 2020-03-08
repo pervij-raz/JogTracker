@@ -15,6 +15,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func closeButton(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func jogsButton(_ sender: UIButton) {

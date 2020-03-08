@@ -53,8 +53,39 @@ class BaseViewController: UIViewController {
     }
     
     @objc func menuAction() {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        guard let menuVC  = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {return}
+        self.stopWaiting()
+        self.navigationController?.pushViewController(menuVC, animated: true)
     }
     
+    func waiting() {
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(blurEffectView)
+        let waitingIndicator = UIActivityIndicatorView(style: .gray)
+        waitingIndicator.center = self.view.center
+        waitingIndicator.startAnimating()
+        self.view.addSubview(waitingIndicator)
+    }
+    
+    func stopWaiting() {
+        self.view.subviews.forEach { view in
+            if view is UIVisualEffectView || view is UIActivityIndicatorView {
+                view.removeFromSuperview()
+            }
+        }
+    }
+    
+    func showError(_ error: String?) {
+        let alertController = UIAlertController(title: "Something went wrong", message: error, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: { action in
+            self.stopWaiting()
+        })
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
     
 }

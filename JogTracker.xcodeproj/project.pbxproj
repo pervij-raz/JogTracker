@@ -28,9 +28,12 @@
 		AD78D6D724142727000A4E58 /* AddJogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D624142727000A4E58 /* AddJogViewController.swift */; };
 		AD78D6D924142B74000A4E58 /* WhiteRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */; };
 		AD78D6DB24142EC8000A4E58 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6DA24142EC8000A4E58 /* RoundedView.swift */; };
+		B5C974FFA23A47A36675FED0 /* Pods_JogTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F49D58D3D31AA8552EB18A /* Pods_JogTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F086724E21880550A30279D /* Pods-JogTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JogTracker.release.xcconfig"; path = "Target Support Files/Pods-JogTracker/Pods-JogTracker.release.xcconfig"; sourceTree = "<group>"; };
+		51F49D58D3D31AA8552EB18A /* Pods_JogTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JogTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD78D6A0241389FE000A4E58 /* JogTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD78D6A3241389FE000A4E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		AD78D6D624142727000A4E58 /* AddJogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJogViewController.swift; sourceTree = "<group>"; };
 		AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRoundedButton.swift; sourceTree = "<group>"; };
 		AD78D6DA24142EC8000A4E58 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		C8176812DFC351E9C5DD5A7B /* Pods-JogTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JogTracker.debug.xcconfig"; path = "Target Support Files/Pods-JogTracker/Pods-JogTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C974FFA23A47A36675FED0 /* Pods_JogTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,8 @@
 			children = (
 				AD78D6A2241389FE000A4E58 /* JogTracker */,
 				AD78D6A1241389FE000A4E58 /* Products */,
+				B3703C1BF52AF2CCA0B5DE08 /* Pods */,
+				B198EBB7EB195B7FD7922AFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +159,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B198EBB7EB195B7FD7922AFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51F49D58D3D31AA8552EB18A /* Pods_JogTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3703C1BF52AF2CCA0B5DE08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8176812DFC351E9C5DD5A7B /* Pods-JogTracker.debug.xcconfig */,
+				1F086724E21880550A30279D /* Pods-JogTracker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD78D6B2241389FF000A4E58 /* Build configuration list for PBXNativeTarget "JogTracker" */;
 			buildPhases = (
+				0B827D6D50ECFCD9447CA411 /* [CP] Check Pods Manifest.lock */,
 				AD78D69C241389FE000A4E58 /* Sources */,
 				AD78D69D241389FE000A4E58 /* Frameworks */,
 				AD78D69E241389FE000A4E58 /* Resources */,
+				2F811F7BA200958B867721E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +244,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B827D6D50ECFCD9447CA411 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JogTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F811F7BA200958B867721E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JogTracker/Pods-JogTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JogTracker/Pods-JogTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JogTracker/Pods-JogTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD78D69C241389FE000A4E58 /* Sources */ = {
@@ -384,6 +453,7 @@
 		};
 		AD78D6B3241389FF000A4E58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8176812DFC351E9C5DD5A7B /* Pods-JogTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +472,7 @@
 		};
 		AD78D6B4241389FF000A4E58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F086724E21880550A30279D /* Pods-JogTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
