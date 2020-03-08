@@ -10,13 +10,15 @@ import UIKit
 
 class WelcomeViewController: BaseViewController {
     
+    let viewModel = WelcomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
         self.waiting()
-        NetworkManager.shared.loginUser(with: {error in
+        self.viewModel.login(with: {error in
             if let error = error {
                 self.showError(error.localizedDescription)
             } else {

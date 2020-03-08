@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
+public typealias WelcomeHandler = (Error?) -> Void
+
 class NetworkManager {
     
     static let shared = NetworkManager()
@@ -18,12 +20,11 @@ class NetworkManager {
     private var getUserURL: URL? {
         return URL(string: "https://jogtracker.herokuapp.com/api/v1/auth/user")
     }
-    typealias Handler = (Error?) -> Void
     
     private init() {
     }
     
-    func loginUser(with handler: @escaping Handler) {
+    func loginUser(with handler: @escaping WelcomeHandler) {
         guard let url = self.loginURL else {return}
         let parametr = ["uuid": "hello"]
         AF.request(url, method: .post, parameters: parametr).responseJSON { response in
@@ -39,7 +40,7 @@ class NetworkManager {
         }
     }
     
-    func getUser(type: String, token: String, handler: @escaping Handler) {
+    func getUser(type: String, token: String, handler: @escaping WelcomeHandler) {
         guard let url = self.getUserURL else {return}
         let headers = HTTPHeaders(["Authorization": "\(type) \(token)"])
         AF.request(url, headers: headers)

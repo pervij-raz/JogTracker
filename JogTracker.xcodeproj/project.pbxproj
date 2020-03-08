@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		AD78D6D724142727000A4E58 /* AddJogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D624142727000A4E58 /* AddJogViewController.swift */; };
 		AD78D6D924142B74000A4E58 /* WhiteRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */; };
 		AD78D6DB24142EC8000A4E58 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6DA24142EC8000A4E58 /* RoundedView.swift */; };
+		AD78D6DD2415649A000A4E58 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6DC24156499000A4E58 /* WelcomeViewModel.swift */; };
 		B5C974FFA23A47A36675FED0 /* Pods_JogTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F49D58D3D31AA8552EB18A /* Pods_JogTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		AD78D6D624142727000A4E58 /* AddJogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJogViewController.swift; sourceTree = "<group>"; };
 		AD78D6D824142B74000A4E58 /* WhiteRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteRoundedButton.swift; sourceTree = "<group>"; };
 		AD78D6DA24142EC8000A4E58 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		AD78D6DC24156499000A4E58 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		C8176812DFC351E9C5DD5A7B /* Pods-JogTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JogTracker.debug.xcconfig"; path = "Target Support Files/Pods-JogTracker/Pods-JogTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				AD78D6C42413F77A000A4E58 /* JogsViewModel.swift */,
+				AD78D6DC24156499000A4E58 /* WelcomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -173,7 +176,6 @@
 				C8176812DFC351E9C5DD5A7B /* Pods-JogTracker.debug.xcconfig */,
 				1F086724E21880550A30279D /* Pods-JogTracker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -309,6 +311,7 @@
 				AD78D6D524142447000A4E58 /* EmptyViewController.swift in Sources */,
 				AD78D6D724142727000A4E58 /* AddJogViewController.swift in Sources */,
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
+				AD78D6DD2415649A000A4E58 /* WelcomeViewModel.swift in Sources */,
 				AD78D6BC2413CFB7000A4E58 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
