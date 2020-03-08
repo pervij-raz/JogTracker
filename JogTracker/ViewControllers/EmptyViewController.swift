@@ -9,4 +9,8 @@
 import UIKit
 
 class EmptyViewController: BaseViewController {
+    
+    @IBAction func addNewJog(_ sender: UIButton) {
+        self.addNewJog()
+    }
 }

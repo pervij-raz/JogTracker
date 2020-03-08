@@ -12,7 +12,7 @@ class BannerView: UIView {
     
     let menuButton = UIButton()
     private let logoImageView = UIImageView()
-    private let filterButton = UIButton()
+    let filterButton = UIButton()
     var withFilter: Bool = false
     var activeFilter: Bool = false
     

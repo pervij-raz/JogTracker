@@ -23,6 +23,7 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
         self.bannerView.withFilter = true
         self.bannerView.activeFilter = true
         super.viewDidLoad()
+        self.bannerView.filterButton.addTarget(self, action: #selector(addNewJog), for: .touchUpInside)
     }
     
 }

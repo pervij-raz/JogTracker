@@ -88,4 +88,10 @@ class BaseViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @objc func addNewJog() {
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        guard let addVC  = storyboard.instantiateViewController(withIdentifier: "AddJogViewController") as? AddJogViewController else {return}
+        self.navigationController?.pushViewController(addVC, animated: true)
+    }
+    
 }

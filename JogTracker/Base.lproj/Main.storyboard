@@ -76,6 +76,9 @@ It is a long established fact that a reader will be distracted by the readable c
                                 <state key="normal" title="Create your jog first">
                                     <color key="titleColor" red="0.91372549020000005" green="0.56470588239999997" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addNewJog:" destination="j2d-im-a1B" eventType="touchUpInside" id="KYc-FQ-hB9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,7 +96,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4O-mg-vnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3394" y="-1010"/>
+            <point key="canvasLocation" x="1907" y="-1010"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -458,7 +461,7 @@ It is a long established fact that a reader will be distracted by the readable c
         <!--Add Jog View Controller-->
         <scene sceneID="3ao-H8-BEr">
             <objects>
-                <viewController id="i6C-KO-p5a" customClass="AddJogViewController" customModule="JogTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddJogViewController" id="i6C-KO-p5a" customClass="AddJogViewController" customModule="JogTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="poM-eU-jGr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,6 +472,9 @@ It is a long established fact that a reader will be distracted by the readable c
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awy-E7-Fxb">
                                         <rect key="frame" x="268" y="19" width="18" height="18"/>
                                         <state key="normal" backgroundImage="cancel"/>
+                                        <connections>
+                                            <action selector="closeForm:" destination="i6C-KO-p5a" eventType="touchUpInside" id="Ani-b5-C46"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJR-Dg-Zsm" customClass="WhiteRoundedButton" customModule="JogTracker" customModuleProvider="target">
                                         <rect key="frame" x="35" y="301" width="237" height="42"/>
@@ -562,7 +568,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGK-Cx-HP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2070" y="-1010"/>
+            <point key="canvasLocation" x="1433" y="-1890"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AQu-AI-opz">
