@@ -22,6 +22,9 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func infoButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        guard let infoVC = storyboard.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController else {return}
+        self.navigationController?.pushViewController(infoVC, animated: true)
     }
     
     @IBAction func contactUsButton(_ sender: UIButton) {

@@ -13,7 +13,7 @@
         <!--Info View Controller-->
         <scene sceneID="DRN-R2-ddM">
             <objects>
-                <viewController id="VZ9-0Y-FBD" customClass="InfoViewController" customModule="JogTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" id="VZ9-0Y-FBD" customClass="InfoViewController" customModule="JogTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M1B-Wa-JgH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +93,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4O-mg-vnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="-1710"/>
+            <point key="canvasLocation" x="3394" y="-1010"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -562,7 +562,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGK-Cx-HP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186.9565217391305" y="-1010.4910714285713"/>
+            <point key="canvasLocation" x="2070" y="-1010"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AQu-AI-opz">

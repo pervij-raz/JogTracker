@@ -9,4 +9,9 @@
 import UIKit
 
 class InfoViewController: BaseViewController {
+    
+    override func menuAction() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
