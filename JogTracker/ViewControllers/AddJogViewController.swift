@@ -22,6 +22,7 @@ class AddJogViewController: BaseViewController {
         super.viewDidLoad()
         self.bannerView.filterButton.addTarget(self, action: #selector(popToList), for: .touchUpInside)
         setupForm()
+        setupDatePicker()
     }
     
     @IBAction func closeForm(_ sender: UIButton) {
@@ -80,6 +81,18 @@ class AddJogViewController: BaseViewController {
                 self.dateTextField.text = formatter.string(from: date)
             }
         }
+    }
+    
+    @objc private func datePickerValueChanged(sender: UIDatePicker) {
+        dateTextField.text = formatter.string(from: sender.date)
+    }
+    
+    private func setupDatePicker() {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: .valueChanged)
+        dateTextField.inputView = datePicker
+        datePicker.date = self.viewModel.jog?.date ?? Date()
     }
     
 }
