@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: ViewController {
     
-    let viewModel = MenuViewModel()
+    private let viewModel = MenuViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class MenuViewController: ViewController {
         if viewModel.jogs?.isEmpty ?? true {
             self.openEmptyList()
         } else {
-           self.openList()
+            self.openList()
         }
     }
     

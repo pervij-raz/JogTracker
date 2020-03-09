@@ -17,8 +17,6 @@ class JogTableViewCell: UITableViewCell {
     
     func setup(with jog: Jog) {
         if let date = jog.date {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "dd.MM.yyyy"
             dateLabel.text = formatter.string(from: date)
         }
         speedLabel.text = String(jog.speed)

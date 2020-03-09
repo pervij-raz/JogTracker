@@ -13,6 +13,17 @@ class BaseViewController: ViewController {
     let bannerView = BannerView()
     private let fillingView = UIView()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupBannerView()
+        self.setupFillingView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.doLayout()
+    }
+    
     private func setupBannerView() {
         self.bannerView.translatesAutoresizingMaskIntoConstraints = false
         self.bannerView.backgroundColor = UIColor(red:0.49, green:0.83, blue:0.13, alpha:1.0)
@@ -28,17 +39,6 @@ class BaseViewController: ViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.setupBannerView()
-        self.setupFillingView()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.doLayout()
-    }
-    
     private func doLayout() {
         let guide = view.safeAreaLayoutGuide
         self.bannerView.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
@@ -52,10 +52,13 @@ class BaseViewController: ViewController {
         self.fillingView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     }
     
-    @objc func addNewJog() {
+    @objc func openAddNewJog(withJog: Jog? = nil) {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
         guard let addVC  = storyboard.instantiateViewController(withIdentifier: "AddJogViewController") as? AddJogViewController else {return}
-        self.navigationController?.pushViewController(addVC, animated: true)
+        if let jog = withJog {
+            addVC.viewModel.jog = jog
+        }
+        self.present(addVC, animated: true, completion: nil)
     }
     
 }

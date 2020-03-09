@@ -253,7 +253,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                 <rect key="frame" x="0.0" y="121" width="414" height="741"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Header" rowHeight="60" id="0ki-pX-uB8" customClass="JogHeaderTableViewCell" customModule="JogTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Header" rowHeight="60" id="0ki-pX-uB8" customClass="JogHeaderTableViewCell" customModule="JogTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ki-pX-uB8" id="UXO-8V-LBn">
@@ -485,6 +485,9 @@ It is a long established fact that a reader will be distracted by the readable c
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButton:" destination="i6C-KO-p5a" eventType="touchUpInside" id="VOf-Cg-Y1a"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xvS-r4-RBw">
                                         <rect key="frame" x="35" y="64" width="237" height="196"/>
@@ -502,7 +505,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                         <rect key="frame" x="0.0" y="22" width="237" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -519,7 +522,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                         <rect key="frame" x="0.0" y="22" width="237" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -565,6 +568,11 @@ It is a long established fact that a reader will be distracted by the readable c
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4g7-Bq-LDC"/>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="erH-wU-2fe" id="FgY-K3-fmu"/>
+                        <outlet property="distanceTextField" destination="lym-td-V7F" id="Z1g-Xt-aWq"/>
+                        <outlet property="timeTextField" destination="Ibm-Um-Bd7" id="oxS-ew-zt6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGK-Cx-HP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

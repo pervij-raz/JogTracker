@@ -13,7 +13,6 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
     private var viewModel = JogsViewModel()
     @IBOutlet weak var tableView: UITableView!
     
-    
     lazy private var headerCell: JogHeaderTableViewCell = {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Header") as! JogHeaderTableViewCell
         return cell
@@ -23,7 +22,15 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
         self.bannerView.withFilter = true
         self.bannerView.activeFilter = true
         super.viewDidLoad()
-        self.bannerView.filterButton.addTarget(self, action: #selector(addNewJog), for: .touchUpInside)
+        self.bannerView.filterButton.addTarget(self, action: #selector(openNewJog), for: .touchUpInside)
+    }
+    
+    @objc private func openNewJog() {
+        self.openAddNewJog()
+    }
+    
+    override func menuAction() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
@@ -51,6 +58,14 @@ extension JogsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return headerCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row < self.viewModel.jogs?.count ?? 0 {
+            self.openAddNewJog(withJog: self.viewModel.jogs?[indexPath.row])
+        } else {
+            self.openAddNewJog()
+        }
     }
     
 }

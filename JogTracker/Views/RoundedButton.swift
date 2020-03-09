@@ -12,8 +12,8 @@ class RoundedButton: UIButton {
     
     private let babyPurpleColor = UIColor(red:0.91, green:0.56, blue:0.98, alpha:1.0)
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func layoutSubviews() {
+        super.layoutSubviews()
         layer.borderWidth = 3
         layer.borderColor = self.babyPurpleColor.cgColor
         layer.cornerRadius = frame.height / 2

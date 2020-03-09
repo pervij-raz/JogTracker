@@ -27,6 +27,10 @@ class NetworkManager {
         return URL(string: "https://jogtracker.herokuapp.com/api/v1/data/sync")
     }
     
+    private var jogURL: URL? {
+        return URL(string: "https://jogtracker.herokuapp.com/api/v1/data/jog")
+    }
+    
     private var type: String?
     private var token: String?
     
@@ -61,7 +65,7 @@ class NetworkManager {
     
     func getUser(type: String, token: String, handler: @escaping Handler) {
         guard let url = self.getUserURL else {return}
-        AF.request(url, headers: self.headers)
+        AF.request(url, method: .get, headers: self.headers)
             .responseJSON { response in
                 switch response.result {
                 case let .success(data):
@@ -77,14 +81,39 @@ class NetworkManager {
     
     func getJogs(with handler: @escaping Handler) {
         guard let url = self.getJogsURL else {return}
-        let param = ["id": UserData.shared.id]
-        AF.request(url, parameters: param, headers: self.headers).response { response in
+        AF.request(url, method: .get, headers: self.headers).response { response in
             switch response.result {
             case .success:
                 guard let data = response.data else {return}
                 let json = try? JSONDecoder().decode(JogsResponse.self, from: data)
                 UserData.shared.jogs = json?.jogs.filter{$0.userID == UserData.shared.id}
                 handler(nil)
+            case let .failure(error):
+                handler(error)
+            }
+        }
+    }
+    
+    func addJog(_ jog: Jog, with handler: @escaping Handler) {
+        guard let url = self.jogURL else {return}
+        let parametr = jog.jogForRequestBody
+        AF.request(url, method: .post, parameters: parametr, headers: self.headers).response { response in
+            switch response.result {
+            case .success:
+                self.getJogs(with: handler)
+            case let .failure(error):
+                handler(error)
+            }
+        }
+    }
+    
+    func updateJog(_ jog: Jog, with handler: @escaping Handler) {
+        guard let url = self.jogURL else {return}
+        let parametr = jog.jogForRequestBody
+        AF.request(url, method: .put, parameters: parametr, headers: self.headers).response { response in
+            switch response.result {
+            case .success:
+                self.getJogs(with: handler)
             case let .failure(error):
                 handler(error)
             }

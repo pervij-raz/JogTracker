@@ -9,6 +9,7 @@
 import Foundation
 
 struct JogsResponse: Decodable {
+    
     var jogs: [Jog]
     
     enum CodingKeys: String, CodingKey {
@@ -19,7 +20,6 @@ struct JogsResponse: Decodable {
         case jogs
         case users
     }
-    
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         handler = {[weak self] error in
             if let error = error {
-                self?.showError(error.localizedDescription)
+                self?.showMessage(title: "Something went wrong", error: error.localizedDescription)
             } else {
                 self?.navigate()
             }
@@ -43,8 +43,8 @@ class ViewController: UIViewController {
         }
     }
     
-    func showError(_ error: String?) {
-        let alertController = UIAlertController(title: "Something went wrong", message: error, preferredStyle: .alert)
+    func showMessage(title: String?, error: String?) {
+        let alertController = UIAlertController(title: title, message: error, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: { action in
             self.stopWaiting()
         })
@@ -65,6 +65,17 @@ class ViewController: UIViewController {
     private func navigate() {
         self.stopWaiting()
         self.navigateToNextController()
+    }
+    
+    func goBack() {
+        if let window = UIApplication.shared.delegate?.window {
+            if var viewController = window?.rootViewController {
+                if (viewController is UINavigationController) {
+                    viewController = (viewController as? UINavigationController)?.visibleViewController ?? UIViewController()
+                }
+                viewController.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
 }

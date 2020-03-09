@@ -10,7 +10,7 @@ import UIKit
 
 class WelcomeViewController: BaseViewController {
     
-    let viewModel = WelcomeViewModel()
+    private let viewModel = WelcomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
