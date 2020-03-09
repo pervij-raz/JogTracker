@@ -10,8 +10,8 @@ import UIKit
 
 class WhiteRoundedButton: RoundedButton {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func layoutSubviews() {
+        super.layoutSubviews()
         layer.borderColor = UIColor.white.cgColor
     }
     

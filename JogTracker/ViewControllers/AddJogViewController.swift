@@ -29,6 +29,7 @@ class AddJogViewController: BaseViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
+        self.view.endEditing(true)
         if let distance = Float(distanceTextField.text ?? ""), let time = Int(timeTextField.text ?? ""), let date = dateTextField.text {
             let jog = Jog(id: self.viewModel.jog?.id, distance: distance, time: time, date: date)
             if jog.equals(compareTo: self.viewModel.jog) {
@@ -40,6 +41,10 @@ class AddJogViewController: BaseViewController {
         } else {
             self.showMessage(title: "Something went wrong", error: "One or more required inputs have not been modified or are empty")
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     override func menuAction() {
