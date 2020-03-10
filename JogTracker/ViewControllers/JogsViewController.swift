@@ -62,11 +62,11 @@ extension JogsViewController: UITextFieldDelegate {
     @objc private func datePickerValueChanged(sender: UIDatePicker) {
         activeTextField?.text = formatter.string(from: sender.date)
     }
-        
+    
     @objc private func pickerDonePressed() {
         self.view.endEditing(true)
-        if activeTextField == self.headerCell.toTextField {
-            guard let fromDate = formatter.date(from: self.headerCell.fromTextField.text ?? ""), let toDate = formatter.date(from: activeTextField?.text ?? "") else {return}
+        if let toText = self.headerCell.toTextField.text, let fromText = self.headerCell.fromTextField.text {
+            guard let fromDate = formatter.date(from: fromText), let toDate = formatter.date(from: toText) else {return}
             self.viewModel.filterJogs(fromDate: fromDate, toDate: toDate)
             self.tableView.reloadData()
         }

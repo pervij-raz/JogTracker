@@ -35,8 +35,23 @@ class NetworkManager {
         return URL(string: "https://jogtracker.herokuapp.com/api/v1/feedback/send")
     }
     
-    private var type: String?
-    private var token: String?
+    private var type: String? {
+        get {
+            return UserDefaults.standard.string(forKey: "type")
+        }
+        set(newValue) {
+            UserDefaults.standard.set(newValue, forKey: "type")
+        }
+    }
+    
+    private var token: String? {
+        get {
+            return UserDefaults.standard.string(forKey: "token")
+        }
+        set(newValue) {
+            UserDefaults.standard.set(newValue, forKey: "token")
+        }
+    }
     
     private var headers: HTTPHeaders? {
         if let type = type, let token = token {
