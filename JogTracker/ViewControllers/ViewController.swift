@@ -83,9 +83,15 @@ class ViewController: UIViewController {
     
     func openMainMenu() {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
-        let centerViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
+        var vc: UIViewController?
+        if UserData.shared.id == nil {
+            vc = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
+        } else {
+            let VC = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+            vc = UINavigationController(rootViewController: VC ?? UIViewController())
+        }
         guard let appDelegate:AppDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
-        appDelegate.centerContainer?.centerViewController = centerViewController
+        appDelegate.centerContainer?.centerViewController = vc
         appDelegate.centerContainer?.toggle(.left, animated: true, completion: nil)
         return
     }

@@ -15,6 +15,13 @@ class UserData {
     private init() {
     }
     
-    open var id: String?
+    open var id: String? {
+        get {
+            return UserDefaults.standard.string(forKey: "userID")
+        }
+        set(newValue) {
+            UserDefaults.standard.set(newValue, forKey: "userID")
+        }
+    }
     open var jogs: [Jog]?
 }

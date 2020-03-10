@@ -17,7 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
-        guard let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftSideMenu") as? LeftSideMenuController, let centerViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController else { return true }
+        var vc: UIViewController?
+        if UserData.shared.id == nil {
+            vc = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
+        } else {
+            let VC = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+            vc = UINavigationController(rootViewController: VC ?? UIViewController())
+        }
+        guard let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftSideMenu") as? LeftSideMenuController, let centerViewController = vc else { return true }
+        
         centerContainer = MMDrawerController(
             center: centerViewController, leftDrawerViewController: leftViewController)
         centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.panningCenterView;

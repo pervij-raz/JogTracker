@@ -17,7 +17,11 @@ class MenuViewController: ViewController {
     }
     
     @IBAction func closeButton(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: true)
+        UserDefaults.standard.removeObject(forKey: "userID")
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
+        guard let appDelegate:AppDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        appDelegate.centerContainer?.centerViewController = vc
     }
     
     @IBAction func jogsButton(_ sender: UIButton) {
