@@ -50,6 +50,10 @@ public var formatter: DateFormatter {
         }
     }
     
+    var weekday: Int {
+        return Calendar.current.dateComponents([.weekday], from: self.date ?? Date()).weekday ?? 0
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case distance

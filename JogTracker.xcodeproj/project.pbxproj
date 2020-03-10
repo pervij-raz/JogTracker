@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD29EC382418233D00BF512D /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29EC372418233D00BF512D /* ReportTableViewCell.swift */; };
+		AD29EC3A241823A500BF512D /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29EC39241823A500BF512D /* ReportViewController.swift */; };
+		AD29EC3C2418357F00BF512D /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29EC3B2418357F00BF512D /* ReportViewModel.swift */; };
+		AD29EC3E2418409F00BF512D /* WeekReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29EC3D2418409F00BF512D /* WeekReport.swift */; };
 		AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6A3241389FE000A4E58 /* AppDelegate.swift */; };
 		AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */; };
 		AD78D6A9241389FE000A4E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD78D6A7241389FE000A4E58 /* Main.storyboard */; };
@@ -42,6 +46,10 @@
 /* Begin PBXFileReference section */
 		1F086724E21880550A30279D /* Pods-JogTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JogTracker.release.xcconfig"; path = "Target Support Files/Pods-JogTracker/Pods-JogTracker.release.xcconfig"; sourceTree = "<group>"; };
 		51F49D58D3D31AA8552EB18A /* Pods_JogTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JogTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD29EC372418233D00BF512D /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		AD29EC39241823A500BF512D /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		AD29EC3B2418357F00BF512D /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		AD29EC3D2418409F00BF512D /* WeekReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekReport.swift; sourceTree = "<group>"; };
 		AD78D6A0241389FE000A4E58 /* JogTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD78D6A3241389FE000A4E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 				AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */,
 				AD78D6DE2415669D000A4E58 /* ViewController.swift */,
 				AD78D6EF2417D356000A4E58 /* LeftSideMenuController.swift */,
+				AD29EC39241823A500BF512D /* ReportViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -154,6 +163,7 @@
 		AD78D6C32413F75F000A4E58 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AD29EC3B2418357F00BF512D /* ReportViewModel.swift */,
 				AD78D6C42413F77A000A4E58 /* JogsViewModel.swift */,
 				AD78D6DC24156499000A4E58 /* WelcomeViewModel.swift */,
 				AD78D6E024156722000A4E58 /* MenuViewModel.swift */,
@@ -169,6 +179,7 @@
 				AD78D6C72413F8B8000A4E58 /* Jog.swift */,
 				AD78D6E32415701F000A4E58 /* UserData.swift */,
 				AD78D6E524157EE8000A4E58 /* JogsResponse.swift */,
+				AD29EC3D2418409F00BF512D /* WeekReport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 				AD78D6CA2413FCEA000A4E58 /* JogTableViewCell.swift */,
 				AD78D6CC2413FE02000A4E58 /* JogHeaderTableViewCell.swift */,
 				AD78D6CE2414145C000A4E58 /* AddJogTableViewCell.swift */,
+				AD29EC372418233D00BF512D /* ReportTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -335,15 +347,19 @@
 				AD78D6C82413F8B8000A4E58 /* Jog.swift in Sources */,
 				AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */,
 				AD78D6F02417D356000A4E58 /* LeftSideMenuController.swift in Sources */,
+				AD29EC3A241823A500BF512D /* ReportViewController.swift in Sources */,
 				AD78D6DF2415669D000A4E58 /* ViewController.swift in Sources */,
 				AD78D6CF2414145C000A4E58 /* AddJogTableViewCell.swift in Sources */,
 				AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */,
 				AD78D6D3241421A2000A4E58 /* InfoViewController.swift in Sources */,
 				AD78D6C22413F4DA000A4E58 /* JogsViewController.swift in Sources */,
 				AD78D6E124156722000A4E58 /* MenuViewModel.swift in Sources */,
+				AD29EC382418233D00BF512D /* ReportTableViewCell.swift in Sources */,
 				AD78D6E42415701F000A4E58 /* UserData.swift in Sources */,
 				AD78D6E824162057000A4E58 /* AddViewModel.swift in Sources */,
+				AD29EC3E2418409F00BF512D /* WeekReport.swift in Sources */,
 				AD78D6D524142447000A4E58 /* EmptyViewController.swift in Sources */,
+				AD29EC3C2418357F00BF512D /* ReportViewModel.swift in Sources */,
 				AD78D6D724142727000A4E58 /* AddJogViewController.swift in Sources */,
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
 				AD78D6DD2415649A000A4E58 /* WelcomeViewModel.swift in Sources */,

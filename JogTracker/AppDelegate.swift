@@ -9,6 +9,8 @@
 import UIKit
 import MMDrawerController
 
+public let storyboard = UIStoryboard(name: "Main", bundle:nil)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let storyboard = UIStoryboard(name: "Main", bundle:nil)
         var vc: UIViewController?
         if UserData.shared.id == nil {
             vc = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController

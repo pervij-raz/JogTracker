@@ -11,55 +11,77 @@ import UIKit
 class MenuViewController: ViewController {
     
     private let viewModel = MenuViewModel()
+    private var isReportLoading: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func closeButton(_ sender: UIButton) {
-        UserDefaults.standard.removeObject(forKey: "userID")
-        let storyboard = UIStoryboard(name: "Main", bundle:nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
+        logout()
+        let vc = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
         guard let appDelegate:AppDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         appDelegate.centerContainer?.centerViewController = vc
     }
     
     @IBAction func jogsButton(_ sender: UIButton) {
+        self.openLists()
+    }
+    
+    @IBAction func infoButton(_ sender: UIButton) {
+        guard let infoVC = storyboard?.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController else {return}
+        self.navigationController?.pushViewController(infoVC, animated: true)
+    }
+    
+    @IBAction func reportButton(_ sender: UIButton) {
+        self.isReportLoading = true
+        self.openLists()
+    }
+    
+    private func openLists() {
         if let _ = UserData.shared.id {
-        self.waiting()
-        self.viewModel.getJogs(with: self.handler)
+            if UserData.shared.jogs != nil {
+                handler(nil)
+            } else {
+                self.waiting()
+                self.viewModel.getJogs(with: self.handler)
+            }
         } else {
             self.showMessage(title: "You are not authorised", error: "For jogs adding please press × and then 'Let me in' button" )
         }
     }
     
-    @IBAction func infoButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle:nil)
-        guard let infoVC = storyboard.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController else {return}
-        self.navigationController?.pushViewController(infoVC, animated: true)
-    }
-    
-    @IBAction func reportButton(_ sender: UIButton) {
-        
+    private func logout() {
+        let domain = Bundle.main.bundleIdentifier ?? ""
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
+        UserData.shared.jogs = nil
     }
     
     override func navigateToNextController() {
-        if viewModel.jogs?.isEmpty ?? true {
-            self.openEmptyList()
+        if self.isReportLoading {
+            self.openReport()
         } else {
-            self.openList()
+            if viewModel.jogs?.isEmpty ?? true {
+                self.openEmptyList()
+            } else {
+                self.openList()
+            }
         }
     }
     
+    private func openReport() {
+        guard let reportVC  = storyboard?.instantiateViewController(withIdentifier: "ReportViewController") as? ReportViewController else {return}
+        self.navigationController?.pushViewController(reportVC, animated: true)
+    }
+    
     private func openEmptyList() {
-        let storyboard = UIStoryboard(name: "Main", bundle:nil)
-        guard let emptyVC  = storyboard.instantiateViewController(withIdentifier: "EmptyViewController") as? EmptyViewController else {return}
+        guard let emptyVC  = storyboard?.instantiateViewController(withIdentifier: "EmptyViewController") as? EmptyViewController else {return}
         self.navigationController?.pushViewController(emptyVC, animated: true)
     }
     
     private func openList() {
-        let storyboard = UIStoryboard(name: "Main", bundle:nil)
-        guard let listVC  = storyboard.instantiateViewController(withIdentifier: "JogsViewController") as? JogsViewController else {return}
+        guard let listVC  = storyboard?.instantiateViewController(withIdentifier: "JogsViewController") as? JogsViewController else {return}
         self.navigationController?.pushViewController(listVC, animated: true)
     }
     

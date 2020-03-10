@@ -53,8 +53,7 @@ class BaseViewController: ViewController {
     }
     
     @objc func openAddNewJog(withJog: Jog? = nil) {
-        let storyboard = UIStoryboard(name: "Main", bundle:nil)
-        guard let addVC  = storyboard.instantiateViewController(withIdentifier: "AddJogViewController") as? AddJogViewController else {return}
+        guard let addVC  = storyboard?.instantiateViewController(withIdentifier: "AddJogViewController") as? AddJogViewController else {return}
         if let jog = withJog {
             addVC.viewModel.jog = jog
         }

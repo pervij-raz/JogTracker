@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         handler = {[weak self] error in
             if let error = error {
                 self?.showMessage(title: "Something went wrong", error: error.localizedDescription)
@@ -56,8 +57,7 @@ class ViewController: UIViewController {
     }
     
     @objc func menuAction() {
-        let storyboard = UIStoryboard(name: "Main", bundle:nil)
-        guard let menuVC  = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {return}
+        guard let menuVC  = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {return}
         self.navigationController?.pushViewController(menuVC, animated: true)
     }
     
@@ -82,12 +82,11 @@ class ViewController: UIViewController {
     }
     
     func openMainMenu() {
-        let storyboard = UIStoryboard(name: "Main", bundle:nil)
         var vc: UIViewController?
         if UserData.shared.id == nil {
-            vc = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
+            vc = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
         } else {
-            let VC = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+            let VC = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
             vc = UINavigationController(rootViewController: VC ?? UIViewController())
         }
         guard let appDelegate:AppDelegate = UIApplication.shared.delegate as? AppDelegate else {return}

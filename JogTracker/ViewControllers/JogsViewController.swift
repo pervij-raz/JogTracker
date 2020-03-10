@@ -26,7 +26,6 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
         self.bannerView.filterButton.addTarget(self, action: #selector(openNewJog), for: .touchUpInside)
         self.createDatePicker(forField: self.headerCell.fromTextField)
         self.createDatePicker(forField: self.headerCell.toTextField)
-        
     }
     
     @objc private func openNewJog() {
