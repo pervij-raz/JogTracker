@@ -31,6 +31,10 @@ class NetworkManager {
         return URL(string: "https://jogtracker.herokuapp.com/api/v1/data/jog")
     }
     
+    private var feedbackURL: URL? {
+        return URL(string: "https://jogtracker.herokuapp.com/api/v1/feedback/send")
+    }
+    
     private var type: String?
     private var token: String?
     
@@ -118,5 +122,20 @@ class NetworkManager {
                 handler(error)
             }
         }
+    }
+    
+    func sendFeedback(title: String, text: String, with handler: @escaping Handler) {
+        guard let url = self.feedbackURL else {return}
+        let parametr: [String: Any] = ["topic_id": 1, "text": text, "topic": title]
+        AF.request(url, method: .post, parameters: parametr, headers: self.headers).response { response in
+            switch response.result {
+            case .success:
+                handler(nil)
+            case let .failure(error):
+                handler(error)
+            }
+        }
+                
+        
     }
 }

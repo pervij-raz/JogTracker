@@ -33,6 +33,9 @@
 		AD78D6E42415701F000A4E58 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6E32415701F000A4E58 /* UserData.swift */; };
 		AD78D6E624157EE8000A4E58 /* JogsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6E524157EE8000A4E58 /* JogsResponse.swift */; };
 		AD78D6E824162057000A4E58 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6E724162057000A4E58 /* AddViewModel.swift */; };
+		AD78D6EC2417BDD6000A4E58 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6EB2417BDD6000A4E58 /* ContactUsViewController.swift */; };
+		AD78D6EE2417C683000A4E58 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6ED2417C683000A4E58 /* ContactViewModel.swift */; };
+		AD78D6F02417D356000A4E58 /* LeftSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD78D6EF2417D356000A4E58 /* LeftSideMenuController.swift */; };
 		B5C974FFA23A47A36675FED0 /* Pods_JogTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F49D58D3D31AA8552EB18A /* Pods_JogTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,9 @@
 		AD78D6E32415701F000A4E58 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AD78D6E524157EE8000A4E58 /* JogsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogsResponse.swift; sourceTree = "<group>"; };
 		AD78D6E724162057000A4E58 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		AD78D6EB2417BDD6000A4E58 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		AD78D6ED2417C683000A4E58 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		AD78D6EF2417D356000A4E58 /* LeftSideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideMenuController.swift; sourceTree = "<group>"; };
 		C8176812DFC351E9C5DD5A7B /* Pods-JogTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JogTracker.debug.xcconfig"; path = "Target Support Files/Pods-JogTracker/Pods-JogTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,12 +128,14 @@
 			children = (
 				AD78D6A5241389FE000A4E58 /* WelcomeViewController.swift */,
 				AD78D6B92413B969000A4E58 /* MenuViewController.swift */,
-				AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */,
 				AD78D6C12413F4DA000A4E58 /* JogsViewController.swift */,
 				AD78D6D2241421A2000A4E58 /* InfoViewController.swift */,
 				AD78D6D424142447000A4E58 /* EmptyViewController.swift */,
 				AD78D6D624142727000A4E58 /* AddJogViewController.swift */,
+				AD78D6EB2417BDD6000A4E58 /* ContactUsViewController.swift */,
+				AD78D6BB2413CFB7000A4E58 /* BaseViewController.swift */,
 				AD78D6DE2415669D000A4E58 /* ViewController.swift */,
+				AD78D6EF2417D356000A4E58 /* LeftSideMenuController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 				AD78D6DC24156499000A4E58 /* WelcomeViewModel.swift */,
 				AD78D6E024156722000A4E58 /* MenuViewModel.swift */,
 				AD78D6E724162057000A4E58 /* AddViewModel.swift */,
+				AD78D6ED2417C683000A4E58 /* ContactViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 			files = (
 				AD78D6C52413F77A000A4E58 /* JogsViewModel.swift in Sources */,
 				AD78D6D924142B74000A4E58 /* WhiteRoundedButton.swift in Sources */,
+				AD78D6EC2417BDD6000A4E58 /* ContactUsViewController.swift in Sources */,
 				AD78D6DB24142EC8000A4E58 /* RoundedView.swift in Sources */,
 				AD78D6C02413E4A1000A4E58 /* BannerView.swift in Sources */,
 				AD78D6B62413A2FD000A4E58 /* NetworkManager.swift in Sources */,
@@ -324,6 +334,7 @@
 				AD78D6BA2413B969000A4E58 /* MenuViewController.swift in Sources */,
 				AD78D6C82413F8B8000A4E58 /* Jog.swift in Sources */,
 				AD78D6A6241389FE000A4E58 /* WelcomeViewController.swift in Sources */,
+				AD78D6F02417D356000A4E58 /* LeftSideMenuController.swift in Sources */,
 				AD78D6DF2415669D000A4E58 /* ViewController.swift in Sources */,
 				AD78D6CF2414145C000A4E58 /* AddJogTableViewCell.swift in Sources */,
 				AD78D6A4241389FE000A4E58 /* AppDelegate.swift in Sources */,
@@ -337,6 +348,7 @@
 				AD78D6B82413B368000A4E58 /* RoundedButton.swift in Sources */,
 				AD78D6DD2415649A000A4E58 /* WelcomeViewModel.swift in Sources */,
 				AD78D6BC2413CFB7000A4E58 /* BaseViewController.swift in Sources */,
+				AD78D6EE2417C683000A4E58 /* ContactViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

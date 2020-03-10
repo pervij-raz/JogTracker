@@ -43,10 +43,13 @@ class ViewController: UIViewController {
         }
     }
     
-    func showMessage(title: String?, error: String?) {
+    func showMessage(title: String?, error: String?, withHandler: (() -> Void)? = nil) {
         let alertController = UIAlertController(title: title, message: error, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: { action in
             self.stopWaiting()
+            if let handler = withHandler {
+                handler()
+            }
         })
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
@@ -76,6 +79,15 @@ class ViewController: UIViewController {
                 viewController.navigationController?.popViewController(animated: true)
             }
         }
+    }
+    
+    func openMainMenu() {
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        let centerViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeVC") as? UINavigationController
+        guard let appDelegate:AppDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        appDelegate.centerContainer?.centerViewController = centerViewController
+        appDelegate.centerContainer?.toggle(.left, animated: true, completion: nil)
+        return
     }
     
 }

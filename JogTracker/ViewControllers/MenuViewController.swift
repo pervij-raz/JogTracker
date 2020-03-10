@@ -35,7 +35,8 @@ class MenuViewController: ViewController {
         self.navigationController?.pushViewController(infoVC, animated: true)
     }
     
-    @IBAction func contactUsButton(_ sender: UIButton) {
+    @IBAction func reportButton(_ sender: UIButton) {
+        
     }
     
     override func navigateToNextController() {

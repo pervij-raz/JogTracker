@@ -7,5 +7,6 @@ target 'JogTracker' do
 
   # Pods for JogTracker
 pod 'Alamofire', '~> 5.0'
+pod 'MMDrawerController', '~> 0.5.7'
 
 end
