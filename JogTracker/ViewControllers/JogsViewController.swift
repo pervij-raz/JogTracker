@@ -61,6 +61,7 @@ extension JogsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row < self.viewModel.jogs?.count ?? 0 {
             self.openAddNewJog(withJog: self.viewModel.jogs?[indexPath.row])
         } else {

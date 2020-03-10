@@ -53,6 +53,13 @@ class AddJogViewController: BaseViewController {
     }
     
     override func navigateToNextController() {
+        if let jogs = UserData.shared.jogs {
+            for (key, value) in jogs.enumerated() {
+                if value.id == self.viewModel.newJog?.id {
+                    UserData.shared.jogs?[key] = self.viewModel.newJog ?? value
+                }
+            }
+        }
         self.dismiss(animated: true, completion: {
             self.showSuccess()
         })

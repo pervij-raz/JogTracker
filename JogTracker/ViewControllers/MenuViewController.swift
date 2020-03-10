@@ -21,8 +21,12 @@ class MenuViewController: ViewController {
     }
     
     @IBAction func jogsButton(_ sender: UIButton) {
+        if let _ = UserData.shared.id {
         self.waiting()
         self.viewModel.getJogs(with: self.handler)
+        } else {
+            self.showMessage(title: "You are not authorised", error: "For jogs adding please press × and then 'Let me in' button" )
+        }
     }
     
     @IBAction func infoButton(_ sender: UIButton) {

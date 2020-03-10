@@ -100,7 +100,7 @@ class NetworkManager {
         AF.request(url, method: .post, parameters: parametr, headers: self.headers).response { response in
             switch response.result {
             case .success:
-                self.getJogs(with: handler)
+                handler(nil)
             case let .failure(error):
                 handler(error)
             }
@@ -113,7 +113,7 @@ class NetworkManager {
         AF.request(url, method: .put, parameters: parametr, headers: self.headers).response { response in
             switch response.result {
             case .success:
-                self.getJogs(with: handler)
+                handler(nil)
             case let .failure(error):
                 handler(error)
             }
