@@ -10,8 +10,27 @@ import Foundation
 
 class JogsViewModel {
     
-    var jogs: [Jog]? {
+    private var allJogs: [Jog]? {
         return UserData.shared.jogs
+    }
+    
+    private var filteredJogs: [Jog]? = nil
+    
+    var jogs: [Jog]? {
+        if let jogs = self.filteredJogs {
+            return jogs.sorted {$0.date ?? Date() < $1.date ?? Date()}
+        } else {
+            return allJogs?.sorted {$0.date ?? Date() < $1.date ?? Date()}
+        }
+    }
+    
+    func filterJogs(fromDate: Date, toDate: Date) {
+        self.filteredJogs = jogs?.filter {
+            if let date = $0.date {
+                return date <= toDate && date >= fromDate
+            }
+            return false
+        }
     }
     
 }

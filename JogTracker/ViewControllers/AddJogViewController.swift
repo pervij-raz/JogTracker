@@ -34,14 +34,18 @@ class AddJogViewController: BaseViewController {
         if let distance = Float(distanceTextField.text ?? ""), let time = Int(timeTextField.text ?? ""), let date = dateTextField.text {
             let jog = Jog(id: self.viewModel.jog?.id, distance: distance, time: time, date: date)
             if jog.equals(compareTo: self.viewModel.jog) {
-                self.showMessage(title: "Something went wrong", error: "One or more required inputs have not been modified or are empty")
+                self.inputsNotFilled()
             } else {
                 self.waiting()
                 self.viewModel.addOrUpdate(jog: jog, handler: self.handler)
             }
         } else {
-            self.showMessage(title: "Something went wrong", error: "One or more required inputs have not been modified or are empty")
+            self.inputsNotFilled()
         }
+    }
+    
+    private func inputsNotFilled() {
+        self.showMessage(title: "Something went wrong", error: "One or more required inputs have not been modified or are empty")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

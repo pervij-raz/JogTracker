@@ -253,7 +253,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                 <rect key="frame" x="0.0" y="121" width="414" height="741"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Header" rowHeight="60" id="0ki-pX-uB8" customClass="JogHeaderTableViewCell" customModule="JogTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="Header" rowHeight="60" id="0ki-pX-uB8" customClass="JogHeaderTableViewCell" customModule="JogTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ki-pX-uB8" id="UXO-8V-LBn">
@@ -279,7 +279,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                                         <constraint firstAttribute="width" constant="72" id="csk-9M-RCk"/>
                                                                     </constraints>
                                                                     <nil key="textColor"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
                                                             </subviews>
@@ -300,7 +300,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                                         <constraint firstAttribute="height" constant="31" id="x5l-ST-bK1"/>
                                                                     </constraints>
                                                                     <nil key="textColor"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
                                                             </subviews>
@@ -316,6 +316,10 @@ It is a long established fact that a reader will be distracted by the readable c
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="fromTextField" destination="amU-hg-GLl" id="WyY-ol-lYh"/>
+                                            <outlet property="toTextField" destination="AKv-JI-jr7" id="EYD-qq-WXp"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="V3a-d4-IhE" customClass="JogTableViewCell" customModule="JogTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="414" height="187"/>
