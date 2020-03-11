@@ -55,7 +55,7 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
     
 }
 
-	// MARK: UITextFieldDelegate
+// MARK: UITextFieldDelegate
 
 extension JogsViewController: UITextFieldDelegate {
     
@@ -92,7 +92,7 @@ extension JogsViewController: UITextFieldDelegate {
     
 }
 
-	// MARK: UITableViewDataSource
+// MARK: UITableViewDataSource
 
 
 extension JogsViewController: UITableViewDataSource {
@@ -100,13 +100,19 @@ extension JogsViewController: UITableViewDataSource {
         return (self.viewModel.jogs?.count ?? 0) + 1
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row < self.viewModel.jogs?.count ?? 0 {
+            if let jogs = self.viewModel.jogs {
+                (cell as? JogTableViewCell)?.setup(with: jogs[indexPath.row])
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row < self.viewModel.jogs?.count ?? 0 {
             guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell") as? JogTableViewCell else {
                 fatalError("Can't find cell")
             }
-            guard let jogs = self.viewModel.jogs else {return cell}
-            cell.setup(with: jogs[indexPath.row])
             return cell
         } else {
             guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "AddCell") else {

@@ -25,7 +25,7 @@ public var formatter: DateFormatter {
     
     var speed: Int {
         if let distance = self.distance, let time = self.time {
-            return Int(round(distance/Float(time)))
+            return round(distance/Float(time)) <= Float(Int.max) ? Int(round(distance/Float(time))) : Int.max
         }
         return 0
     }

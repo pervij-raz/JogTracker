@@ -31,7 +31,7 @@ class WeekReport {
         self.averageTime = sortedJogs.count != 0 ? totalTime / sortedJogs.count : 0
         let a = round(totalTime != 0 ? distance / Float(totalTime) : 0)
         
-        self.averageSpeed = a <= Float(Int.max) ? Int(a) : 0
+        self.averageSpeed = a <= Float(Int.max) ? Int(a) : Int.max
     }
     
     
