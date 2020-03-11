@@ -82,7 +82,9 @@ extension JogsViewController: UITextFieldDelegate {
         if let toText = self.headerCell.toTextField.text, let fromText = self.headerCell.fromTextField.text {
             guard let fromDate = formatter.date(from: fromText), let toDate = formatter.date(from: toText) else {return}
             self.viewModel.filterJogs(fromDate: fromDate, toDate: toDate)
-            self.tableView.reloadData()
+            self.viewModel.getJogs(handler: {_ in
+                self.tableView.reloadData()
+            })
         }
     }
     
