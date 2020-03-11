@@ -21,9 +21,9 @@ class JogsViewModel {
     func getJogs( handler: @escaping Handler) {
         DispatchQueue.main.async { [weak self] in
             if let jogs = self?.filteredJogs {
-                self?.jogs = jogs.sorted {$0.date ?? Date() < $1.date ?? Date()}
+                self?.jogs = jogs.sorted {$0.date ?? Date() > $1.date ?? Date()}
             } else {
-                self?.jogs = self?.allJogs?.sorted {$0.date ?? Date() < $1.date ?? Date()}
+                self?.jogs = self?.allJogs?.sorted {$0.date ?? Date() > $1.date ?? Date()}
             }
             handler(nil)
         }

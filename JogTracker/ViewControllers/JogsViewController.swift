@@ -90,6 +90,7 @@ extension JogsViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         activeTextField = textField
+        activeTextField?.text = formatter.string(from: Date())
     }
     
 }

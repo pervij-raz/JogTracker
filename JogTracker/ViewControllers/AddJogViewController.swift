@@ -62,15 +62,17 @@ class AddJogViewController: BaseViewController {
     
     override func navigateToNextController() {
         if let jogs = UserData.shared.jogs {
-            for (key, value) in jogs.enumerated() {
-                if value.id == self.viewModel.newJog?.id {
-                    UserData.shared.jogs?[key] = self.viewModel.newJog ?? value
+            if self.viewModel.jog == nil, let jog = self.viewModel.newJog {
+                UserData.shared.jogs?.append(jog)
+            } else {
+                for (key, value) in jogs.enumerated() {
+                    if value.id == self.viewModel.newJog?.id {
+                        UserData.shared.jogs?[key] = self.viewModel.newJog ?? value
+                    }
                 }
             }
         }
-        self.dismiss(animated: true, completion: {
-            self.showSuccess()
-        })
+        self.showSuccess()
     }
     
     // MARK: Helpers
@@ -81,14 +83,9 @@ class AddJogViewController: BaseViewController {
     
     
     private func showSuccess() {
-        if let window = UIApplication.shared.delegate?.window {
-            if var viewController = window?.rootViewController {
-                if (viewController is UINavigationController) {
-                    viewController = (viewController as? UINavigationController)?.visibleViewController ?? UIViewController()
-                }
-                (viewController as? JogsViewController)?.showMessage(title: "", error: "Jog is saved")
-            }
-        }
+        self.showMessage(title: "", error: "Jog is saved", withHandler: {() in
+            self.dismiss(animated: true, completion: nil)
+        })
     }
     
     @objc private func popToList() {
