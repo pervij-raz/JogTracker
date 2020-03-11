@@ -18,20 +18,23 @@ class ReportViewModel {
     
     var reports: [WeekReport] = []
     
-    func filterJogs() {
-//        DispatchQueue.main.async { [weak self] in
+    func filterJogs(handler: @escaping Handler) {
+        DispatchQueue.main.async { [weak self] in
             var weeks: [[Jog]] = []
-        guard let jogs = self.jogs else {return}
+        do {
+        guard let jogs = self?.jogs else {return}
             for jog in jogs {
                 let week = jogs.filter {return calendar.isDate($0.date ?? Date(), equalTo: jog.date ?? Date(), toGranularity: .weekOfYear)}
                 weeks.append(week)
                 weeks = Array(Set(weeks))
             }
+        }
             for week in weeks {
                 let report = WeekReport(jogs: week)
-                self.reports.append(report)
+                self?.reports.append(report)
             }
-//        }
+            handler(nil)
+        }
     }
     
     

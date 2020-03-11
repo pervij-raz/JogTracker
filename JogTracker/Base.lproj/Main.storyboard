@@ -139,6 +139,9 @@ It is a long established fact that a reader will be distracted by the readable c
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZVk-YG-1Cy"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="1OY-z4-I4D" id="JxR-Ru-EnS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymn-C9-ZiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,6 +24,11 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
     // MARK: Lifecycle
     
     override func viewDidLoad() {
+        self.waiting()
+        self.viewModel.getJogs(handler: { _ in
+            self.stopWaiting()
+            self.tableView.reloadData()
+        })
         self.bannerView.withFilter = true
         self.bannerView.activeFilter = true
         super.viewDidLoad()

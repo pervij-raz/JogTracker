@@ -9,14 +9,17 @@
 import UIKit
 
 class ReportViewController: BaseViewController {
+    @IBOutlet weak var tableView: UITableView!
     
     let viewModel = ReportViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.waiting()
-        self.viewModel.filterJogs()
-        self.stopWaiting()
+        self.viewModel.filterJogs(handler: { _ in
+            self.stopWaiting()
+            self.tableView.reloadData()
+        })
     }
     
     override func menuAction() {

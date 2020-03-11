@@ -21,6 +21,11 @@ class MenuViewController: ViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.isReportLoading = false
+    }
+    
     // MARK: Buttons
     
     @IBAction func closeButton(_ sender: UIButton) {
@@ -44,6 +49,8 @@ class MenuViewController: ViewController {
         self.openLists()
     }
     
+    // MARK: Helpers
+    
     private func openLists() {
         if let _ = UserData.shared.id {
             if UserData.shared.jogs != nil {
@@ -56,8 +63,6 @@ class MenuViewController: ViewController {
             self.showMessage(title: "You are not authorised", error: "For jogs adding please press × and then 'Let me in' button" )
         }
     }
-    
-    // MARK: Helpers
     
     private func logout() {
         let domain = Bundle.main.bundleIdentifier ?? ""

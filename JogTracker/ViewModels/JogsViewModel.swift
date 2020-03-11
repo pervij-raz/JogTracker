@@ -14,18 +14,23 @@ class JogsViewModel {
         return UserData.shared.jogs
     }
     
+    var jogs: [Jog]?
+    
     private var filteredJogs: [Jog]? = nil
     
-    var jogs: [Jog]? {
-        if let jogs = self.filteredJogs {
-            return jogs.sorted {$0.date ?? Date() < $1.date ?? Date()}
-        } else {
-            return allJogs?.sorted {$0.date ?? Date() < $1.date ?? Date()}
+    func getJogs( handler: @escaping Handler) {
+        DispatchQueue.main.async { [weak self] in
+            if let jogs = self?.filteredJogs {
+                self?.jogs = jogs.sorted {$0.date ?? Date() < $1.date ?? Date()}
+            } else {
+                self?.jogs = self?.allJogs?.sorted {$0.date ?? Date() < $1.date ?? Date()}
+            }
+            handler(nil)
         }
     }
     
     func filterJogs(fromDate: Date, toDate: Date) {
-        self.filteredJogs = jogs?.filter {
+        self.filteredJogs = allJogs?.filter {
             if let date = $0.date {
                 return date <= toDate && date >= fromDate
             }
