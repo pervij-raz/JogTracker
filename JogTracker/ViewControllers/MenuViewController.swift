@@ -10,12 +10,18 @@ import UIKit
 
 class MenuViewController: ViewController {
     
+    // MARK: Properties
+    
     private let viewModel = MenuViewModel()
     private var isReportLoading: Bool = false
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: Buttons
     
     @IBAction func closeButton(_ sender: UIButton) {
         logout()
@@ -51,23 +57,13 @@ class MenuViewController: ViewController {
         }
     }
     
+    // MARK: Helpers
+    
     private func logout() {
         let domain = Bundle.main.bundleIdentifier ?? ""
         UserDefaults.standard.removePersistentDomain(forName: domain)
         UserDefaults.standard.synchronize()
         UserData.shared.jogs = nil
-    }
-    
-    override func navigateToNextController() {
-        if self.isReportLoading {
-            self.openReport()
-        } else {
-            if viewModel.jogs?.isEmpty ?? true {
-                self.openEmptyList()
-            } else {
-                self.openList()
-            }
-        }
     }
     
     private func openReport() {
@@ -83,6 +79,20 @@ class MenuViewController: ViewController {
     private func openList() {
         guard let listVC  = storyboard?.instantiateViewController(withIdentifier: "JogsViewController") as? JogsViewController else {return}
         self.navigationController?.pushViewController(listVC, animated: true)
+    }
+    
+    // MARK: Overrides
+    
+    override func navigateToNextController() {
+        if self.isReportLoading {
+            self.openReport()
+        } else {
+            if viewModel.jogs?.isEmpty ?? true {
+                self.openEmptyList()
+            } else {
+                self.openList()
+            }
+        }
     }
     
 }

@@ -339,7 +339,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGreen" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-Nf-64V">
-                                <rect key="frame" x="25" y="64" width="98.000000000000028" height="37"/>
+                                <rect key="frame" x="25" y="64" width="98" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="98" id="E7H-XN-4K4"/>
                                     <constraint firstAttribute="height" constant="37" id="ti9-V0-pqC"/>
@@ -578,7 +578,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                             <outlet property="timeLabel" destination="LvT-cR-Wp5" id="qxN-t5-thU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCell" id="UCJ-Yl-MCr" customClass="AddJogTableViewCell" customModule="JogTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCell" id="UCJ-Yl-MCr">
                                         <rect key="frame" x="0.0" y="307" width="414" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UCJ-Yl-MCr" id="VKj-zV-X4p">

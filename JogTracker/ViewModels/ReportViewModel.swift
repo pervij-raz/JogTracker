@@ -24,9 +24,9 @@ class ReportViewModel {
         for jog in jogs {
             let week = jogs.filter {return calendar.isDate($0.date ?? Date(), equalTo: jog.date ?? Date(), toGranularity: .weekOfYear)}
             weeks.append(week)
+            weeks = Array(Set(weeks))
         }
-        let filteredWeeks = Set(weeks)
-        for week in filteredWeeks {
+        for week in weeks {
             let report = WeekReport(jogs: week)
             reports.append(report)
         }

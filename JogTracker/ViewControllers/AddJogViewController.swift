@@ -10,11 +10,15 @@ import UIKit
 
 class AddJogViewController: BaseViewController {
     
+    // MARK: Properies
+    
     var viewModel = AddViewModel()
     
     @IBOutlet weak var distanceTextField: UITextField!
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         self.bannerView.withFilter = true
@@ -24,6 +28,8 @@ class AddJogViewController: BaseViewController {
         setupForm()
         setupDatePicker()
     }
+    
+    // MARK: Buttons
     
     @IBAction func closeForm(_ sender: UIButton) {
         self.popToList()
@@ -44,9 +50,7 @@ class AddJogViewController: BaseViewController {
         }
     }
     
-    private func inputsNotFilled() {
-        self.showMessage(title: "Something went wrong", error: "One or more required inputs have not been modified or are empty")
-    }
+    // MARK: Overrides
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -68,6 +72,13 @@ class AddJogViewController: BaseViewController {
             self.showSuccess()
         })
     }
+    
+    // MARK: Helpers
+    
+    private func inputsNotFilled() {
+        self.showMessage(title: "Something went wrong", error: "One or more required inputs have not been modified or are empty")
+    }
+    
     
     private func showSuccess() {
         if let window = UIApplication.shared.delegate?.window {

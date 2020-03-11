@@ -10,6 +10,8 @@ import UIKit
 
 class JogsViewController: BaseViewController, UITableViewDelegate {
     
+    // MARK: Properties
+    
     private var activeTextField: UITextField?
     private var viewModel = JogsViewModel()
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +20,8 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Header") as! JogHeaderTableViewCell
         return cell
     }()
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         self.bannerView.withFilter = true
@@ -28,9 +32,13 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
         self.createDatePicker(forField: self.headerCell.toTextField)
     }
     
+    // MARK: Helpers
+    
     @objc private func openNewJog() {
         self.openAddNewJog()
     }
+    
+    // MARK: Overrides
     
     override func menuAction() {
         self.navigationController?.popViewController(animated: true)
@@ -41,6 +49,8 @@ class JogsViewController: BaseViewController, UITableViewDelegate {
     }
     
 }
+
+	// MARK: UITextFieldDelegate
 
 extension JogsViewController: UITextFieldDelegate {
     
@@ -77,6 +87,9 @@ extension JogsViewController: UITextFieldDelegate {
     
 }
 
+	// MARK: UITableViewDataSource
+
+
 extension JogsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.viewModel.jogs?.count ?? 0) + 1
@@ -91,7 +104,7 @@ extension JogsViewController: UITableViewDataSource {
             cell.setup(with: jogs[indexPath.row])
             return cell
         } else {
-            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "AddCell") as? AddJogTableViewCell else {
+            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "AddCell") else {
                 fatalError("Can't find cell")
             }
             return cell

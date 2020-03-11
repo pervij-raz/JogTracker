@@ -37,6 +37,10 @@ public var formatter: DateFormatter {
         }
     }
     
+    var weekday: Int {
+        return Calendar.current.dateComponents([.weekday], from: self.date ?? Date()).weekday ?? 0
+    }
+    
     var jogForRequestBody: [String: Any]? {
         if let distance = distance, let time = time, let date = date, let userID = userID {
             let dateString = formatter.string(from: date)
@@ -48,10 +52,6 @@ public var formatter: DateFormatter {
         } else {
             return nil
         }
-    }
-    
-    var weekday: Int {
-        return Calendar.current.dateComponents([.weekday], from: self.date ?? Date()).weekday ?? 0
     }
     
     enum CodingKeys: String, CodingKey {
