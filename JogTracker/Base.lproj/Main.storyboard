@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kop-U8-zlB">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kop-U8-zlB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,7 +64,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6tD-iK-xvA" id="R9q-AH-Jll">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Czy-TG-n7N">
@@ -155,62 +153,94 @@ It is a long established fact that a reader will be distracted by the readable c
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT US" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeN-cW-PXa">
-                                <rect key="frame" x="25" y="145" width="158" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQt-O9-AsJ">
-                                <rect key="frame" x="25" y="181" width="364" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0n6-GY-wTn">
-                                <rect key="frame" x="25" y="217" width="364" height="566"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzv-Eb-ucY" customClass="WhiteRoundedButton" customModule="JogTracker" customModuleProvider="target">
-                                <rect key="frame" x="127" y="803" width="160" height="34"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOw-3R-sks">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkW-72-29y">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ay-C5-2tI">
+                                                <rect key="frame" x="25" y="141" width="364" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="74J-DZ-38h">
+                                                <rect key="frame" x="25" y="185" width="364" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="Bcs-uS-E4D"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT US" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifS-q6-Wi1">
+                                                <rect key="frame" x="25" y="101" width="158" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" red="0.4941176471" green="0.82745098039999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CR-VR-n6I" customClass="WhiteRoundedButton" customModule="JogTracker" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="505" width="150" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="zSz-Lh-4u6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Send Message">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sendMessageButton:" destination="dDq-WX-dCz" eventType="touchUpInside" id="RvZ-aY-5uX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="4Ay-C5-2tI" firstAttribute="top" secondItem="ifS-q6-Wi1" secondAttribute="bottom" constant="10" id="APP-wm-orA"/>
+                                            <constraint firstItem="2CR-VR-n6I" firstAttribute="centerX" secondItem="IkW-72-29y" secondAttribute="centerX" id="CfE-pc-KPf"/>
+                                            <constraint firstItem="ifS-q6-Wi1" firstAttribute="top" secondItem="IkW-72-29y" secondAttribute="top" constant="101" id="EKi-wc-Zrb"/>
+                                            <constraint firstItem="2CR-VR-n6I" firstAttribute="top" secondItem="74J-DZ-38h" secondAttribute="bottom" constant="20" id="Hbt-Kc-SB6"/>
+                                            <constraint firstItem="ifS-q6-Wi1" firstAttribute="leading" secondItem="IkW-72-29y" secondAttribute="leading" constant="25" id="JYp-TV-NWh"/>
+                                            <constraint firstItem="74J-DZ-38h" firstAttribute="leading" secondItem="IkW-72-29y" secondAttribute="leading" constant="25" id="O3C-wJ-L07"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Ay-C5-2tI" secondAttribute="trailing" constant="25" id="b3a-Uq-6D5"/>
+                                            <constraint firstAttribute="trailing" secondItem="74J-DZ-38h" secondAttribute="trailing" constant="25" id="hEu-n7-Oao"/>
+                                            <constraint firstItem="74J-DZ-38h" firstAttribute="top" secondItem="4Ay-C5-2tI" secondAttribute="bottom" constant="10" id="icf-AN-lnZ"/>
+                                            <constraint firstItem="4Ay-C5-2tI" firstAttribute="leading" secondItem="IkW-72-29y" secondAttribute="leading" constant="25" id="rjv-af-IXj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="9wg-6q-dP6"/>
+                                    <constraint firstItem="IkW-72-29y" firstAttribute="centerY" secondItem="ZOw-3R-sks" secondAttribute="centerY" id="EqU-GJ-WBE"/>
+                                    <constraint firstItem="IkW-72-29y" firstAttribute="centerX" secondItem="ZOw-3R-sks" secondAttribute="centerX" id="H4n-jf-vhP"/>
+                                    <constraint firstItem="IkW-72-29y" firstAttribute="top" secondItem="ZOw-3R-sks" secondAttribute="top" id="MrM-fP-AhF"/>
+                                    <constraint firstAttribute="bottom" secondItem="IkW-72-29y" secondAttribute="bottom" id="f2r-fq-QuH"/>
+                                    <constraint firstItem="IkW-72-29y" firstAttribute="leading" secondItem="ZOw-3R-sks" secondAttribute="leading" id="jJu-uu-8fG"/>
+                                    <constraint firstItem="IkW-72-29y" firstAttribute="centerX" secondItem="ZOw-3R-sks" secondAttribute="centerX" id="mjD-g6-gps"/>
+                                    <constraint firstItem="IkW-72-29y" firstAttribute="bottom" secondItem="f1M-nn-GyJ" secondAttribute="bottom" id="o7E-yO-r51"/>
+                                    <constraint firstAttribute="trailing" secondItem="IkW-72-29y" secondAttribute="trailing" id="wSL-B4-0bm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Send Message">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendMessageButton:" destination="dDq-WX-dCz" eventType="touchUpInside" id="dji-aK-9iD"/>
-                                </connections>
-                            </button>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nUE-wo-dtX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="f1M-nn-GyJ"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Gzv-Eb-ucY" firstAttribute="centerX" secondItem="6r6-PR-WKN" secondAttribute="centerX" id="85R-Lw-Egc"/>
-                            <constraint firstItem="Gzv-Eb-ucY" firstAttribute="top" secondItem="0n6-GY-wTn" secondAttribute="bottom" constant="20" id="Jlk-Hx-vcH"/>
-                            <constraint firstItem="0n6-GY-wTn" firstAttribute="leading" secondItem="psS-rU-Jre" secondAttribute="leading" constant="25" id="WOq-gq-CMC"/>
-                            <constraint firstItem="0n6-GY-wTn" firstAttribute="top" secondItem="wQt-O9-AsJ" secondAttribute="bottom" constant="6" id="ZPd-04-HXb"/>
-                            <constraint firstItem="EeN-cW-PXa" firstAttribute="leading" secondItem="psS-rU-Jre" secondAttribute="leading" constant="25" id="bCR-z2-ePR"/>
-                            <constraint firstItem="wQt-O9-AsJ" firstAttribute="leading" secondItem="psS-rU-Jre" secondAttribute="leading" constant="25" id="bjy-wy-ii2"/>
-                            <constraint firstItem="psS-rU-Jre" firstAttribute="trailing" secondItem="wQt-O9-AsJ" secondAttribute="trailing" constant="25" id="hV6-8U-EJB"/>
-                            <constraint firstItem="psS-rU-Jre" firstAttribute="bottom" secondItem="Gzv-Eb-ucY" secondAttribute="bottom" constant="25" id="jin-fS-HKk"/>
-                            <constraint firstItem="wQt-O9-AsJ" firstAttribute="top" secondItem="EeN-cW-PXa" secondAttribute="bottom" constant="6" id="pKC-NO-O3S"/>
-                            <constraint firstItem="EeN-cW-PXa" firstAttribute="top" secondItem="psS-rU-Jre" secondAttribute="top" constant="101" id="wTE-xs-41x"/>
-                            <constraint firstItem="psS-rU-Jre" firstAttribute="trailing" secondItem="0n6-GY-wTn" secondAttribute="trailing" constant="25" id="wjT-6r-MJL"/>
+                            <constraint firstItem="ZOw-3R-sks" firstAttribute="trailing" secondItem="psS-rU-Jre" secondAttribute="trailing" id="9ql-Hd-OHY"/>
+                            <constraint firstItem="ZOw-3R-sks" firstAttribute="leading" secondItem="psS-rU-Jre" secondAttribute="leading" id="Hga-4c-2Zk"/>
+                            <constraint firstItem="ZOw-3R-sks" firstAttribute="top" secondItem="6r6-PR-WKN" secondAttribute="top" id="Yx3-e5-mcs"/>
+                            <constraint firstAttribute="bottom" secondItem="ZOw-3R-sks" secondAttribute="bottom" id="kPd-rW-SuA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="psS-rU-Jre"/>
                     </view>
                     <connections>
-                        <outlet property="textTextField" destination="0n6-GY-wTn" id="xyF-4c-PPi"/>
-                        <outlet property="titleTextField" destination="wQt-O9-AsJ" id="7Bb-Pg-gZ0"/>
+                        <outlet property="scrollView" destination="ZOw-3R-sks" id="q5j-8J-bmr"/>
+                        <outlet property="textTextField" destination="74J-DZ-38h" id="Pjc-L3-uex"/>
+                        <outlet property="titleTextField" destination="4Ay-C5-2tI" id="7e2-rg-hlt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zb4-n3-lds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2981" y="295"/>
+            <point key="canvasLocation" x="-2981.1594202898555" y="293.97321428571428"/>
         </scene>
         <!--Empty View Controller-->
         <scene sceneID="dqD-JN-JBc">
@@ -221,10 +251,10 @@ It is a long established fact that a reader will be distracted by the readable c
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sadRoundedSquareEmoticon" translatesAutoresizingMaskIntoConstraints="NO" id="Jgl-xH-cwW">
-                                <rect key="frame" x="164.5" y="261" width="85" height="85"/>
+                                <rect key="frame" x="122" y="261" width="170" height="170"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing is there" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdN-6z-1lM">
-                                <rect key="frame" x="125" y="376" width="164" height="29"/>
+                                <rect key="frame" x="125" y="461" width="164" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -275,12 +305,12 @@ It is a long established fact that a reader will be distracted by the readable c
                                         <rect key="frame" x="127" y="214" width="160" height="313"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bearFace" translatesAutoresizingMaskIntoConstraints="NO" id="mNH-cZ-M3W">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="164"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="211"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oi-th-Yyi" customClass="RoundedButton" customModule="JogTracker" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="266" width="160" height="47"/>
+                                                <rect key="frame" x="0.0" y="313" width="160" height="0.0"/>
                                                 <state key="normal" title="Let me in">
                                                     <color key="titleColor" red="0.9137254901960784" green="0.56470588235294117" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -418,10 +448,10 @@ It is a long established fact that a reader will be distracted by the readable c
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="Header" rowHeight="60" id="0ki-pX-uB8" customClass="JogHeaderTableViewCell" customModule="JogTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ki-pX-uB8" id="UXO-8V-LBn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="HKq-ka-kB1">
@@ -442,7 +472,6 @@ It is a long established fact that a reader will be distracted by the readable c
                                                                         <constraint firstAttribute="height" constant="31" id="Idt-pu-dvt"/>
                                                                         <constraint firstAttribute="width" constant="72" id="csk-9M-RCk"/>
                                                                     </constraints>
-                                                                    <nil key="textColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
@@ -463,7 +492,6 @@ It is a long established fact that a reader will be distracted by the readable c
                                                                         <constraint firstAttribute="width" constant="72" id="aNB-M8-ano"/>
                                                                         <constraint firstAttribute="height" constant="31" id="x5l-ST-bK1"/>
                                                                     </constraints>
-                                                                    <nil key="textColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
@@ -486,10 +514,10 @@ It is a long established fact that a reader will be distracted by the readable c
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="V3a-d4-IhE" customClass="JogTableViewCell" customModule="JogTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="414" height="187"/>
+                                        <rect key="frame" x="0.0" y="88" width="414" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3a-d4-IhE" id="wRp-ka-jmr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="186.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="h6n-hr-Rsl">
@@ -582,14 +610,14 @@ It is a long established fact that a reader will be distracted by the readable c
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCell" id="UCJ-Yl-MCr">
-                                        <rect key="frame" x="0.0" y="307" width="414" height="187"/>
+                                        <rect key="frame" x="0.0" y="275" width="414" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UCJ-Yl-MCr" id="VKj-zV-X4p">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="186.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="6TW-8d-d7f">
-                                                    <rect key="frame" x="337" y="109.5" width="47" height="47"/>
+                                                    <rect key="frame" x="337" y="110" width="47" height="47"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="47" id="5kM-pe-JaY"/>
                                                         <constraint firstAttribute="width" secondItem="6TW-8d-d7f" secondAttribute="height" multiplier="1:1" id="xv7-zN-kzP"/>
@@ -638,14 +666,14 @@ It is a long established fact that a reader will be distracted by the readable c
                                 <rect key="frame" x="53.5" y="203" width="307" height="380"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awy-E7-Fxb">
-                                        <rect key="frame" x="268" y="19" width="18" height="18"/>
+                                        <rect key="frame" x="250" y="19" width="36" height="36"/>
                                         <state key="normal" backgroundImage="cancel"/>
                                         <connections>
                                             <action selector="closeForm:" destination="i6C-KO-p5a" eventType="touchUpInside" id="Ani-b5-C46"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJR-Dg-Zsm" customClass="WhiteRoundedButton" customModule="JogTracker" customModuleProvider="target">
-                                        <rect key="frame" x="35" y="301" width="237" height="42"/>
+                                        <rect key="frame" x="35" y="313" width="237" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="PQl-yh-uVU"/>
                                         </constraints>
@@ -658,10 +686,10 @@ It is a long established fact that a reader will be distracted by the readable c
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xvS-r4-RBw">
-                                        <rect key="frame" x="35" y="64" width="237" height="196"/>
+                                        <rect key="frame" x="35" y="64" width="237" height="208"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-oz-CGk">
-                                                <rect key="frame" x="0.0" y="0.0" width="237" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="237" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqk-4q-TLZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="237" height="16"/>
@@ -670,15 +698,14 @@ It is a long established fact that a reader will be distracted by the readable c
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lym-td-V7F">
-                                                        <rect key="frame" x="0.0" y="22" width="237" height="30"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="22" width="237" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="eRh-cH-5AG">
-                                                <rect key="frame" x="0.0" y="72" width="237" height="52"/>
+                                                <rect key="frame" x="0.0" y="76" width="237" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-Nx-ckV">
                                                         <rect key="frame" x="0.0" y="0.0" width="237" height="16"/>
@@ -687,15 +714,14 @@ It is a long established fact that a reader will be distracted by the readable c
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ibm-Um-Bd7">
-                                                        <rect key="frame" x="0.0" y="22" width="237" height="30"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="22" width="237" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="J9K-T7-k3x">
-                                                <rect key="frame" x="0.0" y="144" width="237" height="52"/>
+                                                <rect key="frame" x="0.0" y="152" width="237" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDU-Zl-s83">
                                                         <rect key="frame" x="0.0" y="0.0" width="237" height="16"/>
@@ -704,8 +730,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erH-wU-2fe">
-                                                        <rect key="frame" x="0.0" y="22" width="237" height="30"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="22" width="237" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
