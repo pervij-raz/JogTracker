@@ -76,7 +76,7 @@ class MenuViewController: ViewController {
         self.navigationController?.pushViewController(emptyVC, animated: true)
     }
     
-    private func openList() {
+    private func openJogs() {
         guard let listVC  = storyboard?.instantiateViewController(withIdentifier: "JogsViewController") as? JogsViewController else {return}
         self.navigationController?.pushViewController(listVC, animated: true)
     }
@@ -90,7 +90,7 @@ class MenuViewController: ViewController {
             if viewModel.jogs?.isEmpty ?? true {
                 self.openEmptyList()
             } else {
-                self.openList()
+                self.openJogs()
             }
         }
     }

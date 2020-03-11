@@ -11,10 +11,12 @@ import UIKit
 class ReportViewController: BaseViewController {
     
     let viewModel = ReportViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.waiting()
         self.viewModel.filterJogs()
+        self.stopWaiting()
     }
     
     override func menuAction() {
