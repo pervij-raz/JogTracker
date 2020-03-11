@@ -669,7 +669,7 @@ It is a long established fact that a reader will be distracted by the readable c
                                 <rect key="frame" x="53.5" y="203" width="307" height="380"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awy-E7-Fxb">
-                                        <rect key="frame" x="268" y="19" width="18" height="18"/>
+                                        <rect key="frame" x="250" y="19" width="36" height="36"/>
                                         <state key="normal" backgroundImage="cancel"/>
                                         <connections>
                                             <action selector="closeForm:" destination="i6C-KO-p5a" eventType="touchUpInside" id="Ani-b5-C46"/>

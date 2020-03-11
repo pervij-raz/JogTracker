@@ -21,14 +21,17 @@ class ReportViewModel {
     func filterJogs(handler: @escaping Handler) {
         DispatchQueue.main.async { [weak self] in
             var weeks: [[Jog]] = []
-        do {
-        guard let jogs = self?.jogs else {return}
-            for jog in jogs {
-                let week = jogs.filter {return calendar.isDate($0.date ?? Date(), equalTo: jog.date ?? Date(), toGranularity: .weekOfYear)}
-                weeks.append(week)
-                weeks = Array(Set(weeks))
+            do {
+                guard var jogs = self?.jogs else {return}
+                jogs = jogs.sorted{$0.dateInt ?? 0 < $1.dateInt ?? 0}
+                for (key,jog) in jogs.enumerated() {
+                    if key < jogs.count - 7 {
+                        let week = jogs[key...key+7].filter {return calendar.isDate($0.date ?? Date(), equalTo: jog.date ?? Date(), toGranularity: .weekOfYear)}
+                        weeks.append(week)
+                        weeks = Array(Set(weeks))
+                    }
+                }
             }
-        }
             for week in weeks {
                 let report = WeekReport(jogs: week)
                 self?.reports.append(report)
