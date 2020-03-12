@@ -18,6 +18,8 @@ class ReportTableViewCell: UITableViewCell {
     
     
     func setup(with report: WeekReport, number: Int) {
+        let from = report.fromDate
+        let to = report.toDate
         self.dateLabel.text = "Week \(number): (\(formatter.string(from: report.fromDate ?? Date())) / \(formatter.string(from: report.fromDate ?? Date())))"
         self.distanceLabel.text = "Total distance: \(report.totalDistance ?? 0)"
         self.speedLabel.text = "Average speed: \(report.averageSpeed ?? 0)"
