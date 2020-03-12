@@ -36,6 +36,7 @@ class ReportViewModel {
                 let report = WeekReport(jogs: week)
                 self?.reports.append(report)
             }
+            self?.reports = self?.reports.sorted{$0.from ?? 0 > $1.from ?? 0} ?? []
             handler(nil)
         }
     }
