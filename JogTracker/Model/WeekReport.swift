@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WeekReport {
+@objc class WeekReport: NSObject {
     
     var from: Int?
     var to: Int?
@@ -19,13 +19,13 @@ class WeekReport {
     var fromDate: Date? {
         let date = Date(timeIntervalSince1970: TimeInterval(from ?? 0))
         let day = Calendar.current.dateComponents([.weekday], from: date).weekday ?? 0
-        return Calendar.current.date(byAdding: .day, value: 1 - day, to: date)
+        return Calendar.current.date(byAdding: .day, value: 2 - day, to: date)
     }
     
     var toDate: Date? {
         let date = Date(timeIntervalSince1970: TimeInterval(to ?? 0))
         let day = Calendar.current.dateComponents([.weekday], from: date).weekday ?? 0
-        return Calendar.current.date(byAdding: .day, value: 1 - day, to: date)
+        return Calendar.current.date(byAdding: .day, value: 8 - day, to: date)
     }
     
     init(jogs: [Jog]?) {

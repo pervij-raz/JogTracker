@@ -38,7 +38,7 @@ public var formatter: DateFormatter {
     }
     
     var weekday: Int {
-        return calendar.dateComponents([.weekday], from: self.date ?? Date()).weekday ?? 0
+        return Calendar.current.dateComponents([.weekday], from: self.date ?? Date()).weekday ?? 0
     }
     
     var jogForRequestBody: [String: Any]? {

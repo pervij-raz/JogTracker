@@ -38,8 +38,11 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReportCell") as? ReportTableViewCell else {
             fatalError("Can't find cell")
         }
-        cell.setup(with: self.viewModel.reports[indexPath.row], number: indexPath.row)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        (cell as? ReportTableViewCell)?.setup(with: self.viewModel.reports[indexPath.row], number: indexPath.row)
     }
     
     
